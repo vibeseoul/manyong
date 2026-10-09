@@ -13,8 +13,7 @@ window.MANYONG_CONFIG = {
   staffPinHash: "2ae45826a7dc163b07ac0d8a8d81dfff5f3ca2c56cf557772e9f0cb930362219",
 
   // 테스트용 초기화 PIN (SHA-256 해시값). 쿠폰의 PIN 칸에 이 번호를 넣으면 처음 상태로 돌아갑니다.
-  // 지금 값은 임시 PIN 8642 입니다.
-  resetPinHash: "c32627273f27202d473ce39d577c43d23ad85e32d954fb37c8b21b9647754355",
+  resetPinHash: "53e59a03619994f7ad12832b1b0848e4ab46b772bed3fb1669169750ba186853",
 
   // 쿠폰은 받은 날 이 시각까지만 사용할 수 있습니다 (매장 마감 시각, 독일 시간)
   couponUntil: "20:00",
