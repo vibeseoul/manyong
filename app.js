@@ -10,7 +10,7 @@ const Q_KEY = KEY + "-queue";
 const ENDS = CFG.endsAt ? new Date(CFG.endsAt).getTime() : Infinity;
 
 const T = {
- en:{bonusValid:"For our 1st anniversary: valid 27 Nov – 3 Dec 2026",bonusKeep:"Come back with this phone and open this page again. Your coupon is saved here.",notYet:"Not yet! This coupon works from 27 Nov.",bonusEnded:"This coupon has expired.",eyebrow:"Halloween · Oct 26–31",title:"Find Manyong!",lead:"Our vampire Manyong is hiding in three spots in the store. Tap a shadow and scan the QR code when you find him.",
+ en:{bonusValid:"At our café, today only until {time}",showCafe:"Show this screen at the café counter",eyebrow:"Halloween · Oct 26–31",title:"Find Manyong!",lead:"Our vampire Manyong is hiding in three spots in the store. Tap a shadow and scan the QR code when you find him.",
   found:"Found",tap:"Tap a shadow to open the camera.",slotOpen:"Still hiding",slotDone:"Found!",
   doneEyebrow:"All three found",doneTitle:"You caught Manyong!",sample:"SAMPLE",valid:"Valid today only, until {time}",left:"{left} left",hurry:"Use it before Manyong takes it back!",expired:"Too late! Manyong took the coupon back. Coupons are only valid on the day you get them.",show:"Show this screen at the checkout",
   hint:"Our staff will confirm it with a PIN.",staff:"I'm done!",pinLabel:"Staff PIN",pinWrong:"Wrong PIN.",pinLocked:"Too many tries. Please wait {s} s.",pinNoHttps:"PIN check needs a secure (https) page.",
@@ -23,7 +23,7 @@ const T = {
   camStarting:"Starting camera …",camFail:"Camera not available. Take a photo of the QR code or type the code below.",noQr:"No QR code found. Try closer, with more light.",
   wrong:"That's not a Manyong code.",already:"You already found this one!",gotIt:"Found! ",bonusGot:"Golden Manyong found!",entrance:"You're already here. Now find the hidden Manyongs!",
   resetTitle:"Staff: reset this phone",resetBtn:"Reset",resetDone:"Reset done."},
- de:{bonusValid:"Zu unserem 1. Geburtstag: gültig 27.11.–03.12.2026",bonusKeep:"Komm mit diesem Handy wieder und öffne diese Seite. Dein Coupon ist hier gespeichert.",notYet:"Noch nicht! Dieser Coupon gilt ab dem 27.11.",bonusEnded:"Dieser Coupon ist abgelaufen.",eyebrow:"Halloween · 26.–31. Oktober",title:"Finde Manyong!",lead:"Unser Vampir Manyong hat sich an drei Orten im Store versteckt. Tippe auf einen Schatten und scanne den QR-Code, wenn du ihn findest.",
+ de:{bonusValid:"In unserem Café, nur heute bis {time} Uhr",showCafe:"Zeig diesen Bildschirm an der Café-Theke",eyebrow:"Halloween · 26.–31. Oktober",title:"Finde Manyong!",lead:"Unser Vampir Manyong hat sich an drei Orten im Store versteckt. Tippe auf einen Schatten und scanne den QR-Code, wenn du ihn findest.",
   found:"Gefunden",tap:"Tippe auf einen Schatten, um die Kamera zu öffnen.",slotOpen:"Noch versteckt",slotDone:"Gefunden!",
   doneEyebrow:"Alle drei gefunden",doneTitle:"Manyong ist erwischt!",sample:"BEISPIEL",valid:"Nur heute gültig, bis {time} Uhr",left:"Noch {left}",hurry:"Schnell, bevor Manyong ihn zurückholt!",expired:"Zu spät! Manyong hat den Coupon zurückgeholt. Coupons gelten nur an dem Tag, an dem du sie bekommst.",show:"Zeig diesen Bildschirm an der Kasse",
   hint:"Unser Team bestätigt mit einer PIN.",staff:"Geschafft!",pinLabel:"Personal-PIN",pinWrong:"Falsche PIN.",pinLocked:"Zu viele Versuche. Bitte {s} Sek. warten.",pinNoHttps:"Die PIN-Prüfung braucht eine sichere (https) Seite.",
@@ -36,7 +36,7 @@ const T = {
   camStarting:"Kamera startet …",camFail:"Kamera nicht verfügbar. Mach ein Foto vom QR-Code oder gib den Code darunter ein.",noQr:"Kein QR-Code erkannt. Versuch es näher und mit mehr Licht.",
   wrong:"Das ist kein Manyong-Code.",already:"Diesen Manyong hast du schon!",gotIt:"Gefunden! ",bonusGot:"Goldener Manyong gefunden!",entrance:"Du bist schon hier. Jetzt such die versteckten Manyongs!",
   resetTitle:"Personal: dieses Handy zurücksetzen",resetBtn:"Zurücksetzen",resetDone:"Zurückgesetzt."},
- ko:{bonusValid:"1주년 기념: 2026년 11월 27일–12월 3일 사용 가능",bonusKeep:"이 휴대폰으로 이 페이지를 다시 열면 쿠폰이 그대로 있어요.",notYet:"아직이에요! 11월 27일부터 쓸 수 있어요.",bonusEnded:"사용 기간이 끝났어요.",eyebrow:"Halloween · 10월 26–31일",title:"숨은 마뇽을 찾아라!",lead:"뱀파이어 마뇽이 매장 세 곳에 숨었어요. 그림자를 누르고, 마뇽을 찾으면 옆의 QR을 찍어 주세요.",
+ ko:{bonusValid:"매장 카페에서 오늘 {time}까지만 사용 가능",showCafe:"카페 카운터에서 이 화면을 보여 주세요",eyebrow:"Halloween · 10월 26–31일",title:"숨은 마뇽을 찾아라!",lead:"뱀파이어 마뇽이 매장 세 곳에 숨었어요. 그림자를 누르고, 마뇽을 찾으면 옆의 QR을 찍어 주세요.",
   found:"찾은 마뇽",tap:"그림자를 누르면 카메라가 켜져요.",slotOpen:"숨어 있음",slotDone:"찾았다!",
   doneEyebrow:"세 마리 모두 찾음",doneTitle:"마뇽을 잡았어요!",sample:"예시",valid:"오늘 {time}까지만 사용 가능",left:"남은 시간 {left}",hurry:"마뇽이 쿠폰을 도로 가져가기 전에 서둘러요!",expired:"앗, 늦었어요! 마뇽이 쿠폰을 도로 가져갔어요. 쿠폰은 받은 날에만 쓸 수 있어요.",show:"계산대에서 이 화면을 보여 주세요",
   hint:"직원이 PIN으로 확인해 드려요.",staff:"완료했어요",pinLabel:"직원 PIN",pinWrong:"PIN이 맞지 않아요.",pinLocked:"시도가 너무 많아요. {s}초 후에 다시 해 주세요.",pinNoHttps:"PIN 확인은 https 페이지에서만 돼요.",
@@ -75,26 +75,26 @@ const ended = () => Date.now() >= ENDS;
 const UNTIL = /^\d{1,2}:\d{2}$/.test(CFG.couponUntil || "") ? CFG.couponUntil.padStart(5, "0") : "20:00";
 
 // Closing time (Berlin) on the day of `ts`.
-function dayDeadline(ts) {
+function dayDeadline(ts, until) {
+  until = until || UNTIL;
   try {
     const parts = {};
     new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin", year: "numeric", month: "2-digit", day: "2-digit", timeZoneName: "shortOffset" })
       .formatToParts(new Date(ts)).forEach(x => { parts[x.type] = x.value; });
     const m = (parts.timeZoneName || "").match(/([+-])(\d{1,2})(?::(\d{2}))?/);
     const off = m ? m[1] + m[2].padStart(2, "0") + ":" + (m[3] || "00") : "+01:00";
-    const d = Date.parse(parts.year + "-" + parts.month + "-" + parts.day + "T" + UNTIL + ":00" + off);
+    const d = Date.parse(parts.year + "-" + parts.month + "-" + parts.day + "T" + until + ":00" + off);
     if (!isNaN(d)) return d;
   } catch (e) {}
-  const d = new Date(ts); const hm = UNTIL.split(":"); d.setHours(+hm[0], +hm[1], 0, 0); return d.getTime();
+  const d = new Date(ts); const hm = until.split(":"); d.setHours(+hm[0], +hm[1], 0, 0); return d.getTime();
 }
-const BONUS_FROM = CFG.bonusValidFrom ? new Date(CFG.bonusValidFrom).getTime() : 0;
-const BONUS_UNTIL = CFG.bonusValidUntil ? new Date(CFG.bonusValidUntil).getTime() : Infinity;
-// main coupon: same day until closing; golden coupon: 1st-anniversary window
+const BONUS_TIME = /^\d{1,2}:\d{2}$/.test(CFG.bonusUntil || "") ? CFG.bonusUntil.padStart(5, "0") : UNTIL;
+// main coupon: same day until closing; golden coupon: same day until the café's last order
 function deadline(kind) {
-  if (kind === "bonus") return BONUS_UNTIL;
-  return Math.min(ENDS, state.doneAt ? dayDeadline(state.doneAt) : Infinity);
+  const at = kind === "bonus" ? (state.bonusAt || state.doneAt) : state.doneAt;
+  return Math.min(ENDS, at ? dayDeadline(at, kind === "bonus" ? BONUS_TIME : UNTIL) : Infinity);
 }
-function startOf(kind) { return kind === "bonus" ? BONUS_FROM : 0; }
+function startOf() { return 0; }
 function fmtLeft(ms) {
   const s = Math.max(0, Math.floor(ms / 1000));
   const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
@@ -228,7 +228,7 @@ function renderCoupon(kind) {
   const dl = deadline(kind), now = Date.now(), bonus = kind === "bonus";
   const isExpired = !used && now >= dl;
   const notYet = !used && !isExpired && now < startOf(kind);
-  q("ended").textContent = notYet ? t("notYet") : bonus ? t("bonusEnded") : (ended() ? t("ended") : t("expired"));
+  q("ended").textContent = notYet ? t("notYet") : (ended() ? t("ended") : t("expired"));
   q("ended").classList.toggle("soft", notYet);
   c.el.classList.toggle("redeemed", !!used);
   c.el.classList.toggle("expired", isExpired);
@@ -236,11 +236,11 @@ function renderCoupon(kind) {
   q("used").hidden = !used;
   if (used) q("used").textContent = t("usedAt") + fmt(used);
   q("ended").hidden = !(isExpired || notYet);
-  if (bonus) q("valid").textContent = t("bonusValid");
+  if (bonus) { q("valid").textContent = t("bonusValid").replace("{time}", BONUS_TIME); q("show").textContent = t("showCafe"); }
   q("valid").hidden = !!used || isExpired;
-  q("timer").hidden = bonus || !!used || isExpired;
+  q("timer").hidden = !!used || isExpired;
   q("hurry").textContent = t("hurry");
-  c.deadline = dl; c.live = !bonus && !used && !isExpired;
+  c.deadline = dl; c.live = !used && !isExpired;
   const canRedeem = !used && !isExpired && !notYet;
   q("hint").textContent = notYet ? t("bonusKeep") : t("hint");
   q("hint").hidden = !(canRedeem || notYet);
