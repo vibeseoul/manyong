@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PIN 해시 만들기</title>
+<style>
+body{font-family:system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;background:#0c0b0d;color:#f4f2ef;margin:0;padding:32px 16px;line-height:1.5}
+main{max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+input,button{font:inherit;font-size:20px;padding:10px 12px;border-radius:10px;border:1px solid #2c2930;background:#17151a;color:inherit}
+button{background:#f4f2ef;color:#0c0b0d;font-weight:700;cursor:pointer}
+code{display:block;word-break:break-all;background:#17151a;border:1px solid #2c2930;border-radius:10px;padding:12px;font-size:13px}
+p{margin:0;color:#9b97a0;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <h1 style="margin:0;font-size:22px">직원 PIN 바꾸기</h1>
+  <p>새 PIN 4자리를 넣고 만들기를 누르면 나오는 값을 config.js 의 staffPinHash 에 붙여 넣으세요. PIN 자체는 어디에도 저장되지 않습니다.</p>
+  <input id="pin" type="password" inputmode="numeric" maxlength="4" placeholder="새 PIN 4자리" autocomplete="off">
+  <button id="go" type="button">만들기</button>
+  <code id="out">—</code>
+</main>
+<script>
+document.getElementById("go").addEventListener("click", async () => {
+  const pin = document.getElementById("pin").value.trim();
+  const out = document.getElementById("out");
+  if (!/^\d{4}$/.test(pin)) { out.textContent = "숫자 4자리를 넣어 주세요."; return; }
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("manyong:" + pin));
+  out.textContent = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+});
+</script>
+</body>
+</html>
