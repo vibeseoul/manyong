@@ -31,12 +31,11 @@ window.MANYONG_CONFIG = {
     ko: "오늘 구매 10% 할인"
   },
 
-  // 황금 마뇽(게임 클리어) 혜택: 할로윈 시즌 음료 할인 (카페에서 사용)
-  bonusOffer: {
-    en: "50% off a Halloween seasonal drink",
-    de: "50 % auf ein Halloween-Saisongetränk",
-    ko: "할로윈 시즌 음료 50% 할인"
-  },
-  // 황금 쿠폰은 받은 날 이 시각까지만 사용 가능 (카페 라스트 오더)
-  bonusUntil: "19:30"
+  // 황금 마뇽(게임 클리어)을 찾으면 위 쿠폰이 이 혜택으로 업그레이드됩니다
+  // (같은 쿠폰, 같은 사용 기한 · 아직 사용하지 않은 쿠폰만)
+  upgradeOffer: {
+    en: "15% off your purchase today",
+    de: "15 % auf deinen Einkauf heute",
+    ko: "오늘 구매 15% 할인"
+  }
 };

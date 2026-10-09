@@ -118,10 +118,14 @@ h1{font-family:var(--f-display);font-weight:var(--dw);font-size:clamp(34px,10vw,
 .secret .plate.found{background:var(--plate)}
 .secret .plate:not(.found) img{filter:brightness(.5);animation:shimmer 2.4s ease-in-out infinite}
 @keyframes shimmer{50%{filter:brightness(1.2) drop-shadow(0 0 8px var(--gold))}}
-.secret .reward{background:linear-gradient(135deg,#f6e3b0,#e3b34c 55%,#f3d78e)}
-.secret .reward .stamp{background:rgba(246,227,176,.9)}
-.secret .reward .eyebrow{color:#7a4f00}
-.secret .reward .hint{color:inherit}
+.secret .note{color:var(--gold);font-weight:600;text-align:center}
+/* golden Manyong: same coupon, upgraded */
+.reward.gold{background:linear-gradient(135deg,#f6e3b0,#e3b34c 55%,#f3d78e)}
+.reward.gold .stamp{background:rgba(246,227,176,.9)}
+.reward.gold .eyebrow{color:#7a4f00}
+.reward.upgrade{animation:upgrade .9s cubic-bezier(.2,1.4,.4,1)}
+@keyframes upgrade{0%{transform:scale(.94);box-shadow:0 0 0 0 rgba(227,179,76,.9)}60%{box-shadow:0 0 0 14px rgba(227,179,76,0)}100%{transform:scale(1)}}
+.was{font-size:13px;font-weight:500;opacity:.6;text-decoration:line-through}
 
 footer{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--mute);border-top:1px solid var(--line);padding-top:16px}
 footer a{color:var(--ink);text-underline-offset:3px}
@@ -188,9 +192,9 @@ footer a{color:var(--ink);text-underline-offset:3px}
   <section class="secret" id="secret" hidden>
     <span class="eyebrow" data-t="secretEyebrow"></span>
     <h2 data-t="secretTitle"></h2>
-    <p data-t="secretHint"></p>
+    <p id="secretHint" data-t="secretHint"></p>
     <button type="button" class="plate" id="plate4" aria-label="Golden Manyong"><img alt=""></button>
-    <section class="reward" id="bonus" hidden></section>
+    <p class="note" id="secretNote" hidden></p>
   </section>
 
   <ol class="steps" id="steps">
@@ -227,7 +231,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
 <template id="couponTpl">
   <span class="eyebrow" data-k="eyebrow"></span>
   <h2 data-k="title"></h2>
-  <div class="row"><img alt="" data-k="img"><div class="offer"><span><span data-k="offer"></span><span class="sample" data-k="sample"></span></span><small data-k="valid"></small></div></div>
+  <div class="row"><img alt="" data-k="img"><div class="offer"><s class="was" data-k="was" hidden></s><span><span data-k="offer"></span><span class="sample" data-k="sample"></span></span><small data-k="valid"></small></div></div>
   <p class="timer" data-k="timer"><span data-k="left"></span><span data-k="hurry"></span></p>
   <div class="ticket"><span><span class="dot"></span><span data-k="show"></span></span><span class="code" data-k="code"></span><span data-k="clock"></span></div>
   <p class="hint" data-k="hint"></p>

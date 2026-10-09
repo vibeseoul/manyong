@@ -6,14 +6,14 @@
 
 | 항목 | 설명 |
 |---|---|
-| `offer` / `bonusOffer` | 혜택 문구 (영어·독일어·한국어) |
+| `offer` | 마뇽 3마리 완료 쿠폰 문구 (영어·독일어·한국어) |
+| `upgradeOffer` | 황금 마뇽(게임 클리어)을 찾으면 같은 쿠폰이 이 문구로 업그레이드 |
 | `sample` | 혜택이 확정되면 `false` 로 바꾸기 → '예시' 표시가 사라짐 |
 | `staffPinHash` | 직원 PIN. `tools/pin.html` 에서 새 값을 만들어 붙여 넣기 |
 | `resetPinHash` | 테스트용 초기화 PIN (만드는 방법은 위와 같음) |
 | `sheetUrl` | 참여 집계용 구글 Apps Script 웹 앱 주소 |
 | `couponUntil` | 쿠폰은 받은 날 이 시각(매장 마감)까지만 사용 가능 |
 | `endsAt` | 이벤트 종료. 이 시각 이후 본 쿠폰 사용 불가 |
-| `bonusValidFrom` / `bonusValidUntil` | 황금 마뇽 1주년 쿠폰 사용 기간 (11/27–12/3) |
 
 GitHub에서 `config.js` → 연필 아이콘 → 수정 → Commit changes 하면 1–2분 뒤 반영됩니다.
 
@@ -25,7 +25,7 @@ GitHub에서 `config.js` → 연필 아이콘 → 수정 → Commit changes 하�
 | 1번 마뇽 | `…/?s=BOO` | BOO |
 | 2번 마뇽 | `…/?s=FANG` | FANG |
 | 3번 마뇽 | `…/?s=CAPE` | CAPE |
-| 황금 마뇽 (게임 클리어 화면) | `…/?s=MOON` | MOON |
+| 황금 마뇽 (게임 클리어 화면, 쿠폰 업그레이드) | `…/?s=MOON` | MOON |
 
 ## 직원용
 
