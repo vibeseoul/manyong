@@ -12,7 +12,8 @@
 | `resetPinHash` | 테스트용 초기화 PIN (만드는 방법은 위와 같음) |
 | `sheetUrl` | 참여 집계용 구글 Apps Script 웹 앱 주소 |
 | `couponUntil` | 쿠폰은 받은 날 이 시각(매장 마감)까지만 사용 가능 |
-| `endsAt` | 이벤트 종료. 이 시각 이후 쿠폰 사용 불가 |
+| `endsAt` | 이벤트 종료. 이 시각 이후 본 쿠폰 사용 불가 |
+| `bonusValidFrom` / `bonusValidUntil` | 황금 마뇽 1주년 쿠폰 사용 기간 (11/27–12/3) |
 
 GitHub에서 `config.js` → 연필 아이콘 → 수정 → Commit changes 하면 1–2분 뒤 반영됩니다.
 

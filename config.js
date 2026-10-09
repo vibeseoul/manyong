@@ -31,10 +31,13 @@ window.MANYONG_CONFIG = {
     ko: "오늘 구매 10% 할인"
   },
 
-  // 황금 마뇽(게임 클리어) 혜택
+  // 황금 마뇽(게임 클리어) 혜택: 1주년 재방문 쿠폰
   bonusOffer: {
-    en: "An extra gift at the checkout",
-    de: "Ein Extra-Geschenk an der Kasse",
-    ko: "계산대에서 추가 선물"
-  }
+    en: "10% off your next purchase",
+    de: "10 % auf deinen nächsten Einkauf",
+    ko: "다음 구매 10% 할인"
+  },
+  // 황금 쿠폰 사용 기간 (1주년, 독일 시간): 11/27 0시부터 12/3 끝까지
+  bonusValidFrom: "2026-11-27T00:00:00+01:00",
+  bonusValidUntil: "2026-12-04T00:00:00+01:00"
 };
