@@ -9,8 +9,8 @@ window.MANYONG_CONFIG = {
   sheetUrl: "",
 
   // 직원 PIN (SHA-256 해시값). PIN을 바꾸려면 tools/pin.html 에서 새 값을 만들어 붙여 넣으세요.
-  // 지금 값은 임시 PIN 1234 입니다.
-  staffPinHash: "1040bd78c6aaa6af4028396e01bb12c717d50bbfde36a46cc5c9916c097877bb",
+  // PIN은 매장 직원에게만 공유하세요.
+  staffPinHash: "2ae45826a7dc163b07ac0d8a8d81dfff5f3ca2c56cf557772e9f0cb930362219",
 
   // 이 시각이 지나면 쿠폰을 사용할 수 없습니다 (독일 시간 11/1 0시)
   endsAt: "2026-11-01T00:00:00+01:00",
