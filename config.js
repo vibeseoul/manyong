@@ -6,7 +6,7 @@ window.MANYONG_CONFIG = {
 
   // 참여 숫자 집계용 구글 Apps Script 웹 앱 주소
   // (비워 두면 집계하지 않고 페이지만 작동합니다)
-  sheetUrl: "",
+  sheetUrl: "https://script.google.com/macros/s/AKfycbxBWJHeDlGCoDD1LHT7_SVsC5KbX_AdR79n6a63oOJEDdknttL07-Rt3ult-wi9-ocjEg/exec",
 
   // 직원 PIN (SHA-256 해시값). PIN을 바꾸려면 tools/pin.html 에서 새 값을 만들어 붙여 넣으세요.
   // PIN은 매장 직원에게만 공유하세요.
