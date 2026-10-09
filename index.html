@@ -87,6 +87,10 @@ h1{font-family:var(--f-display);font-weight:var(--dw);font-size:clamp(34px,10vw,
 .ticket .code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:18px;font-weight:700;letter-spacing:.08em}
 .ticket .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:6px;animation:blink 1s infinite}
 @keyframes blink{50%{opacity:.2}}
+.timer{margin:0;display:flex;flex-direction:column;gap:2px;background:var(--plate-ink);color:var(--plate);border-radius:12px;padding:10px 14px}
+.timer [data-k="left"]{font-family:var(--f-display);font-weight:var(--dw);font-size:22px;font-variant-numeric:tabular-nums;color:#ff5c8a}
+.timer [data-k="hurry"]{font-size:13px;font-weight:500;opacity:.85}
+.timer.soon [data-k="left"]{animation:blink 1s infinite}
 .hint{font-size:13px;opacity:.75;margin:0}
 .staffbtn{border:0;border-radius:12px;background:var(--plate-ink);color:var(--plate);padding:14px;font-weight:600;font-size:14px;cursor:pointer}
 .pinbox{display:flex;flex-direction:column;gap:8px}
@@ -102,7 +106,9 @@ h1{font-family:var(--f-display);font-weight:var(--dw);font-size:clamp(34px,10vw,
 .usedline{font-weight:600;color:var(--red);font-size:14px}
 .reward.redeemed .row img{animation:none;filter:grayscale(1);opacity:.6}
 .reward.redeemed .ticket .dot{animation:none;background:#999}
-.ended{font-weight:600;font-size:14px}
+.ended{font-weight:600;font-size:14px;color:var(--red)}
+.reward.expired .row img{animation:none;filter:grayscale(1);opacity:.5}
+.reward.expired .ticket .dot{animation:none;background:#999}
 
 .secret{border:1px solid var(--gold-deep);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px;background:radial-gradient(120% 80% at 50% 0%,rgba(227,179,76,.14),transparent 70%),var(--panel)}
 .secret .eyebrow{color:var(--gold)}
@@ -220,6 +226,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
   <span class="eyebrow" data-k="eyebrow"></span>
   <h2 data-k="title"></h2>
   <div class="row"><img alt="" data-k="img"><div class="offer"><span><span data-k="offer"></span><span class="sample" data-k="sample"></span></span><small data-k="valid"></small></div></div>
+  <p class="timer" data-k="timer"><span data-k="left"></span><span data-k="hurry"></span></p>
   <div class="ticket"><span><span class="dot"></span><span data-k="show"></span></span><span class="code" data-k="code"></span><span data-k="clock"></span></div>
   <p class="hint" data-k="hint"></p>
   <button type="button" class="staffbtn" data-k="staff"></button>

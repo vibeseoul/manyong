@@ -12,12 +12,12 @@ const ENDS = CFG.endsAt ? new Date(CFG.endsAt).getTime() : Infinity;
 const T = {
  en:{eyebrow:"Halloween · Oct 26–31",title:"Find Manyong!",lead:"Our vampire Manyong is hiding in three spots in the store. Tap a shadow and scan the QR code when you find him.",
   found:"Found",tap:"Tap a shadow to open the camera.",slotOpen:"Still hiding",slotDone:"Found!",
-  doneEyebrow:"All three found",doneTitle:"You caught Manyong!",sample:"SAMPLE",valid:"Valid until 31 Oct 2026",show:"Show this screen at the checkout",
+  doneEyebrow:"All three found",doneTitle:"You caught Manyong!",sample:"SAMPLE",valid:"Valid today only, until {time}",left:"{left} left",hurry:"Use it before Manyong takes it back!",expired:"Too late! Manyong took the coupon back. Coupons are only valid on the day you get them.",show:"Show this screen at the checkout",
   hint:"Our staff will confirm it with a PIN.",staff:"I'm done!",pinLabel:"Staff PIN",pinWrong:"Wrong PIN.",pinLocked:"Too many tries. Please wait {s} s.",pinNoHttps:"PIN check needs a secure (https) page.",
   usedAt:"Redeemed ",stamp:"Redeemed",ended:"This promotion has ended.",redeemedToast:"Coupon redeemed",
   secretEyebrow:"Psst … secret",secretTitle:"There's one more: the golden Manyong.",secretHint:"Play “Don't Wake Manyong!” in the K-POP zone on the 1st floor. Win, and a secret QR code appears on the screen.",
   bonusEyebrow:"Secret found",bonusTitle:"Golden Manyong found!",bonusEarly:"Golden Manyong found! Find the other three to unlock it.",
-  s1:"Find the three hidden Manyongs in the store.",s2:"Tap a shadow here and scan the QR code next to him.",s3:"Found all three? Show this screen at the checkout.",
+  s1:"Find the three hidden Manyongs in the store.",s2:"Tap a shadow here and scan the QR code next to him.",s3:"Found all three? Your coupon is valid today only, so show it at the checkout before we close.",
   foot:"vibe seoul · Zeil 68, Frankfurt",privacy:"No personal data. We only count anonymously how many people take part. Your progress stays on this phone.",
   scanTitle:"Scan the QR code",photo:"📷 Take a photo of the QR code",or:"or enter the code",
   camStarting:"Starting camera …",camFail:"Camera not available. Take a photo of the QR code or type the code below.",noQr:"No QR code found. Try closer, with more light.",
@@ -25,12 +25,12 @@ const T = {
   resetTitle:"Staff: reset this phone",resetBtn:"Reset",resetDone:"Reset done."},
  de:{eyebrow:"Halloween · 26.–31. Oktober",title:"Finde Manyong!",lead:"Unser Vampir Manyong hat sich an drei Orten im Store versteckt. Tippe auf einen Schatten und scanne den QR-Code, wenn du ihn findest.",
   found:"Gefunden",tap:"Tippe auf einen Schatten, um die Kamera zu öffnen.",slotOpen:"Noch versteckt",slotDone:"Gefunden!",
-  doneEyebrow:"Alle drei gefunden",doneTitle:"Manyong ist erwischt!",sample:"BEISPIEL",valid:"Gültig bis 31.10.2026",show:"Zeig diesen Bildschirm an der Kasse",
+  doneEyebrow:"Alle drei gefunden",doneTitle:"Manyong ist erwischt!",sample:"BEISPIEL",valid:"Nur heute gültig, bis {time} Uhr",left:"Noch {left}",hurry:"Schnell, bevor Manyong ihn zurückholt!",expired:"Zu spät! Manyong hat den Coupon zurückgeholt. Coupons gelten nur an dem Tag, an dem du sie bekommst.",show:"Zeig diesen Bildschirm an der Kasse",
   hint:"Unser Team bestätigt mit einer PIN.",staff:"Geschafft!",pinLabel:"Personal-PIN",pinWrong:"Falsche PIN.",pinLocked:"Zu viele Versuche. Bitte {s} Sek. warten.",pinNoHttps:"Die PIN-Prüfung braucht eine sichere (https) Seite.",
   usedAt:"Eingelöst am ",stamp:"Eingelöst",ended:"Diese Aktion ist beendet.",redeemedToast:"Coupon eingelöst",
   secretEyebrow:"Psst … geheim",secretTitle:"Da ist noch ein goldener Manyong.",secretHint:"Spiel „Weck Manyong nicht auf!“ in der K-POP-Zone im 1. OG. Wer gewinnt, bekommt einen geheimen QR-Code auf dem Bildschirm.",
   bonusEyebrow:"Geheimnis gelüftet",bonusTitle:"Goldener Manyong gefunden!",bonusEarly:"Goldener Manyong gefunden! Finde zuerst die anderen drei.",
-  s1:"Finde die drei versteckten Manyongs im Store.",s2:"Tippe hier auf einen Schatten und scanne den QR-Code daneben.",s3:"Alle drei gefunden? Zeig den Bildschirm an der Kasse.",
+  s1:"Finde die drei versteckten Manyongs im Store.",s2:"Tippe hier auf einen Schatten und scanne den QR-Code daneben.",s3:"Alle drei gefunden? Dein Coupon gilt nur heute – zeig ihn an der Kasse, bevor wir schließen.",
   foot:"vibe seoul · Zeil 68, Frankfurt",privacy:"Keine persönlichen Daten. Wir zählen nur anonym, wie viele mitmachen. Dein Fortschritt bleibt auf diesem Handy.",
   scanTitle:"QR-Code scannen",photo:"📷 Foto vom QR-Code machen",or:"oder Code eingeben",
   camStarting:"Kamera startet …",camFail:"Kamera nicht verfügbar. Mach ein Foto vom QR-Code oder gib den Code darunter ein.",noQr:"Kein QR-Code erkannt. Versuch es näher und mit mehr Licht.",
@@ -38,12 +38,12 @@ const T = {
   resetTitle:"Personal: dieses Handy zurücksetzen",resetBtn:"Zurücksetzen",resetDone:"Zurückgesetzt."},
  ko:{eyebrow:"Halloween · 10월 26–31일",title:"숨은 마뇽을 찾아라!",lead:"뱀파이어 마뇽이 매장 세 곳에 숨었어요. 그림자를 누르고, 마뇽을 찾으면 옆의 QR을 찍어 주세요.",
   found:"찾은 마뇽",tap:"그림자를 누르면 카메라가 켜져요.",slotOpen:"숨어 있음",slotDone:"찾았다!",
-  doneEyebrow:"세 마리 모두 찾음",doneTitle:"마뇽을 잡았어요!",sample:"예시",valid:"2026년 10월 31일까지 사용 가능",show:"계산대에서 이 화면을 보여 주세요",
+  doneEyebrow:"세 마리 모두 찾음",doneTitle:"마뇽을 잡았어요!",sample:"예시",valid:"오늘 {time}까지만 사용 가능",left:"남은 시간 {left}",hurry:"마뇽이 쿠폰을 도로 가져가기 전에 서둘러요!",expired:"앗, 늦었어요! 마뇽이 쿠폰을 도로 가져갔어요. 쿠폰은 받은 날에만 쓸 수 있어요.",show:"계산대에서 이 화면을 보여 주세요",
   hint:"직원이 PIN으로 확인해 드려요.",staff:"완료했어요",pinLabel:"직원 PIN",pinWrong:"PIN이 맞지 않아요.",pinLocked:"시도가 너무 많아요. {s}초 후에 다시 해 주세요.",pinNoHttps:"PIN 확인은 https 페이지에서만 돼요.",
   usedAt:"사용 완료 ",stamp:"사용 완료",ended:"이벤트가 끝났어요.",redeemedToast:"쿠폰 사용 완료",
   secretEyebrow:"쉿… 비밀",secretTitle:"황금 마뇽이 하나 더 있어요.",secretHint:"1층 K-POP존에서 ‘마뇽을 깨우지 마!’ 게임을 해 보세요. 성공하면 화면에 비밀 QR이 나타나요.",
   bonusEyebrow:"비밀을 찾았어요",bonusTitle:"황금 마뇽을 찾았어요!",bonusEarly:"황금 마뇽을 찾았어요! 나머지 세 마리를 먼저 찾아 주세요.",
-  s1:"매장에 숨은 마뇽 세 마리를 찾아요.",s2:"여기서 그림자를 누르고 옆의 QR을 찍어요.",s3:"다 찾았다면 계산대에서 화면을 보여 주세요.",
+  s1:"매장에 숨은 마뇽 세 마리를 찾아요.",s2:"여기서 그림자를 누르고 옆의 QR을 찍어요.",s3:"다 찾았다면 계산대에서 화면을 보여 주세요. 쿠폰은 받은 날 문 닫기 전까지만 쓸 수 있어요!",
   foot:"vibe seoul · Zeil 68, Frankfurt",privacy:"개인정보는 받지 않아요. 참여 인원만 익명으로 집계하고, 진행 기록은 이 휴대폰에만 남아요.",
   scanTitle:"QR 찍기",photo:"📷 QR 사진 찍기",or:"또는 코드 입력",
   camStarting:"카메라를 켜는 중…",camFail:"카메라를 쓸 수 없어요. QR 사진을 찍거나 아래에 코드를 입력해 주세요.",noQr:"QR을 찾지 못했어요. 더 가까이, 밝은 곳에서 찍어 주세요.",
@@ -53,7 +53,7 @@ const T = {
 
 const IMG = { s1:"img/s1.webp", s2:"img/s2.webp", s3:"img/s3.webp", c1:"img/c1.webp", c2:"img/c2.webp", c3:"img/c3.webp", gold:"img/gold.webp", sgold:"img/sgold.webp" };
 
-const fresh = () => ({ found: [], code: null, redeemed: null, bonusRedeemed: null, visited: false, tester: false, pinFails: 0, lockUntil: 0 });
+const fresh = () => ({ found: [], code: null, doneAt: null, bonusAt: null, redeemed: null, bonusRedeemed: null, visited: false, tester: false, pinFails: 0, lockUntil: 0 });
 let state = fresh();
 let lang = "en";
 const $ = s => document.querySelector(s);
@@ -72,6 +72,30 @@ const mainDone = () => [1, 2, 3].every(has);
 const locale = () => (lang === "ko" ? "ko-KR" : lang === "de" ? "de-DE" : "en-GB");
 const fmt = ts => new Date(ts).toLocaleString(locale(), { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
 const ended = () => Date.now() >= ENDS;
+const UNTIL = /^\d{1,2}:\d{2}$/.test(CFG.couponUntil || "") ? CFG.couponUntil.padStart(5, "0") : "20:00";
+
+// Closing time (Berlin) on the day of `ts`.
+function dayDeadline(ts) {
+  try {
+    const parts = {};
+    new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin", year: "numeric", month: "2-digit", day: "2-digit", timeZoneName: "shortOffset" })
+      .formatToParts(new Date(ts)).forEach(x => { parts[x.type] = x.value; });
+    const m = (parts.timeZoneName || "").match(/([+-])(\d{1,2})(?::(\d{2}))?/);
+    const off = m ? m[1] + m[2].padStart(2, "0") + ":" + (m[3] || "00") : "+01:00";
+    const d = Date.parse(parts.year + "-" + parts.month + "-" + parts.day + "T" + UNTIL + ":00" + off);
+    if (!isNaN(d)) return d;
+  } catch (e) {}
+  const d = new Date(ts); const hm = UNTIL.split(":"); d.setHours(+hm[0], +hm[1], 0, 0); return d.getTime();
+}
+function deadline(kind) {
+  const at = kind === "main" ? state.doneAt : (state.bonusAt || state.doneAt);
+  return Math.min(ENDS, at ? dayDeadline(at) : Infinity);
+}
+function fmtLeft(ms) {
+  const s = Math.max(0, Math.floor(ms / 1000));
+  const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+  return h + ":" + String(m).padStart(2, "0") + ":" + String(x).padStart(2, "0");
+}
 
 function newCode() {
   const A = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -167,7 +191,7 @@ function buildCoupon(el, kind) {
     if (!res) return;
     if (res === "reset") { hardReset(); return; }
     const used = kind === "main" ? state.redeemed : state.bonusRedeemed;
-    if (!used && !ended()) {
+    if (!used && Date.now() < deadline(kind)) {
       if (kind === "main") { state.redeemed = Date.now(); track("redeem", { code: state.code }); }
       else { state.bonusRedeemed = Date.now(); track("bonus_redeem", { code: state.code }); }
       save(); toast(t("redeemedToast"));
@@ -190,21 +214,27 @@ function renderCoupon(kind) {
   q("offer").textContent = offer[lang] || offer.en || "";
   q("sample").textContent = t("sample");
   q("sample").hidden = !CFG.sample;
-  q("valid").textContent = t("valid");
+  q("valid").textContent = t("valid").replace("{time}", UNTIL);
   q("show").textContent = t("show");
   q("code").textContent = state.code || "";
   q("hint").textContent = t("hint");
   q("staff").textContent = t("staff");
   q("pinLabel").textContent = t("pinLabel");
   q("stamp").textContent = t("stamp");
-  q("ended").textContent = t("ended");
+  const dl = deadline(kind);
+  const isExpired = !used && Date.now() >= dl;
+  q("ended").textContent = ended() ? t("ended") : t("expired");
   c.el.classList.toggle("redeemed", !!used);
+  c.el.classList.toggle("expired", isExpired);
   q("stamp").hidden = !used;
   q("used").hidden = !used;
   if (used) q("used").textContent = t("usedAt") + fmt(used);
-  const isEnded = !used && ended();
-  q("ended").hidden = !isEnded;
-  const canRedeem = !used && !isEnded;
+  q("ended").hidden = !isExpired;
+  q("valid").hidden = !!used || isExpired;
+  q("timer").hidden = !!used || isExpired;
+  q("hurry").textContent = t("hurry");
+  c.deadline = dl; c.live = !used && !isExpired;
+  const canRedeem = !used && !isExpired;
   q("hint").hidden = !canRedeem;
   q("pinbox").hidden = !c.open;
   q("staff").hidden = c.open || !canRedeem;
@@ -252,6 +282,16 @@ function render() {
 function tick() {
   const now = new Date().toLocaleString(locale(), { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" });
   document.querySelectorAll('[data-k="clock"]').forEach(e => { e.textContent = now; });
+  let flip = false;
+  Object.keys(coupons).forEach(k => {
+    const c = coupons[k];
+    if (!c.live || c.el.hidden) return;
+    const left = c.deadline - Date.now();
+    if (left <= 0) { flip = true; return; }
+    c.q("left").textContent = t("left").replace("{left}", fmtLeft(left));
+    c.q("timer").classList.toggle("soon", left < 30 * 60 * 1000);
+  });
+  if (flip) render();
 }
 
 let toastTimer;
@@ -279,9 +319,9 @@ function collect(raw, fromUrl) {
   if (has(n)) { toast(t("already")); return true; }
   const wasDone = mainDone();
   state.found.push(n);
-  if (n === 4) track("bonus", { code: state.code });
+  if (n === 4) { state.bonusAt = Date.now(); track("bonus", { code: state.code }); }
   else track("found" + n);
-  if (!wasDone && mainDone()) { state.code = state.code || newCode(); track("complete", { code: state.code }); }
+  if (!wasDone && mainDone()) { state.doneAt = Date.now(); state.code = state.code || newCode(); track("complete", { code: state.code }); }
   save(); render();
   const el = n === 4 ? $("#plate4") : document.querySelector('.slot[data-n="' + n + '"] .plate');
   if (el) { el.classList.remove("pop"); void el.offsetWidth; el.classList.add("pop"); }
@@ -392,6 +432,7 @@ $("#resetPin").addEventListener("keydown", e => { if (e.key === "Enter") doReset
 
 /* ---------- boot ---------- */
 load();
+if (state.code && !state.doneAt) { state.doneAt = Date.now(); save(); }
 buildCoupon($("#reward"), "main");
 buildCoupon($("#bonus"), "bonus");
 const checkHash = () => { if (location.hash === "#reset") { $("#staffpanel").hidden = false; window.scrollTo(0, 0); } };
