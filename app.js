@@ -242,7 +242,7 @@ function tokenFrom(text) {
   try {
     const u = new URL(v);
     if (u.searchParams.get("s")) v = u.searchParams.get("s");
-    else if (u.searchParams.get("from")) return "POP";
+    else if (u.searchParams.get("from") || u.searchParams.get("f")) return "POP";
   } catch (e) {}
   return v.toUpperCase().replace(/[^A-Z0-9]/g, "");
 }
@@ -382,11 +382,11 @@ try { params = new URLSearchParams(location.search); } catch (e) {}
 const s = params && params.get("s");
 if (!state.visited) {
   state.visited = true; save();
-  track("visit", { src: s ? "qr" : (params && params.get("from")) || "link" });
+  track("visit", { src: s ? "qr" : (params && (params.get("from") || params.get("f"))) || "link" });
 }
 render();
 setInterval(tick, 1000);
 if (s) collect(s, true);
-if (params && (s || params.get("from"))) { try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {} }
+if (params && (s || params.get("from") || params.get("f"))) { try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {} }
 flush();
 })();

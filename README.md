@@ -18,7 +18,7 @@ GitHub에서 `config.js` → 연필 아이콘 → 수정 → Commit changes 하�
 
 | QR | 들어가는 주소 | 손으로 입력하는 코드 |
 |---|---|---|
-| 입구 POP | `…/?from=pop` | – |
+| 입구 POP | `…/?f=pop` | – |
 | 1번 마뇽 | `…/?s=BOO` | BOO |
 | 2번 마뇽 | `…/?s=FANG` | FANG |
 | 3번 마뇽 | `…/?s=CAPE` | CAPE |
