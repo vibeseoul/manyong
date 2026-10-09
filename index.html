@@ -11,6 +11,7 @@
 <link rel="apple-touch-icon" href="img/icon.png">
 <style>
 /* Layout: one phone-width column. A dark store-at-night ground, three white "plates" that hold the shadows, one gold secret below. Single dark look by choice. */
+@font-face{font-family:"Henny Penny";src:url(fonts/hennypenny.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Bricolage Grotesque";src:url(fonts/bricolage-800.woff2) format("woff2");font-weight:800;font-display:swap}
 @font-face{font-family:"Instrument Sans";src:url(fonts/instrument-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Instrument Sans";src:url(fonts/instrument-500.woff2) format("woff2");font-weight:500;font-display:swap}
@@ -20,10 +21,13 @@
   --plate:#f3f1ec; --plate-ink:#111; --red:#c4144b; --gold:#e3b34c; --gold-deep:#b8862a; --bad:#ff7a9c;
   --silver:linear-gradient(100deg,#c9c9cf 0%,#ffffff 35%,#a7a7ae 60%,#f1f1f4 100%);
   --kr:"Apple SD Gothic Neo","Noto Sans KR","Noto Sans CJK KR","Malgun Gothic";
-  --f-display:"Bricolage Grotesque",var(--kr),system-ui,sans-serif;
+  --f-display:"Henny Penny",var(--kr),system-ui,sans-serif; --dw:400; --dls:0;
+  --f-brand:"Bricolage Grotesque",system-ui,sans-serif;
   --f-body:"Instrument Sans",var(--kr),system-ui,-apple-system,sans-serif;
   color-scheme:dark;
 }
+/* Korean has no Henny Penny glyphs: use the brand face there */
+html[lang="ko"]{--f-display:"Bricolage Grotesque",var(--kr),system-ui,sans-serif;--dw:800;--dls:-.02em}
 *{box-sizing:border-box}
 html,body{background:var(--bg);color:var(--ink);margin:0}
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -35,19 +39,19 @@ button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 
 .top{display:flex;justify-content:space-between;align-items:center;padding-top:18px}
-.wordmark{font-family:var(--f-display);font-weight:800;font-size:18px;letter-spacing:-.01em;background:var(--silver);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
+.wordmark{font-family:var(--f-brand);font-weight:800;font-size:18px;letter-spacing:-.01em;background:var(--silver);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
 .langs{display:flex;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
 .langs button{background:none;border:0;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--mute);cursor:pointer}
 .langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 
 .hero{display:flex;flex-direction:column;gap:10px}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,10vw,46px);line-height:1;letter-spacing:-.03em;margin:0;text-wrap:balance}
+h1{font-family:var(--f-display);font-weight:var(--dw);font-size:clamp(34px,10vw,46px);line-height:1.05;letter-spacing:var(--dls);margin:0;text-wrap:balance}
 .lead{margin:0;color:var(--mute);max-width:36ch}
 
 .board{display:flex;flex-direction:column;gap:14px}
 .progress{display:flex;justify-content:space-between;align-items:baseline;font-size:14px;color:var(--mute)}
-.progress b{font-family:var(--f-display);font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums}
+.progress b{font-family:var(--f-display);font-weight:var(--dw);font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums}
 .bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;background:var(--red);transition:width .5s ease}
 .plates{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -67,11 +71,11 @@ h1{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,10vw,46px);
 
 .steps{list-style:none;margin:0;padding:18px 0 0;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line)}
 .steps li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:14px;color:var(--mute)}
-.steps li span{font-family:var(--f-display);font-weight:800;color:var(--ink)}
+.steps li span{font-family:var(--f-display);font-weight:var(--dw);color:var(--ink)}
 
 /* coupon */
 .reward{background:var(--plate);color:var(--plate-ink);border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
-.reward h2,.secret h2{font-family:var(--f-display);font-weight:800;font-size:28px;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.reward h2,.secret h2{font-family:var(--f-display);font-weight:var(--dw);font-size:28px;line-height:1.1;letter-spacing:var(--dls);margin:0;text-wrap:balance}
 .reward .row{display:flex;gap:14px;align-items:center}
 .reward .row img{width:76px;height:76px;object-fit:contain;flex:none;animation:bob 1.4s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-6px) rotate(-4deg)}}
@@ -94,7 +98,7 @@ h1{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,10vw,46px);
 .pinerr{margin:0;font-size:13px;font-weight:600;color:var(--red);min-height:1.2em}
 .shake{animation:shake .35s}
 @keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
-.stamp{align-self:center;margin-top:4px;transform:rotate(-6deg);border:3px solid var(--red);color:var(--red);border-radius:10px;padding:4px 10px;font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:.04em;text-transform:uppercase;background:rgba(243,241,236,.9)}
+.stamp{align-self:center;margin-top:4px;transform:rotate(-6deg);border:3px solid var(--red);color:var(--red);border-radius:10px;padding:4px 10px;font-family:var(--f-display);font-weight:var(--dw);font-size:20px;letter-spacing:.04em;text-transform:uppercase;cursor:default;background:rgba(243,241,236,.9)}
 .usedline{font-weight:600;color:var(--red);font-size:14px}
 .reward.redeemed .row img{animation:none;filter:grayscale(1);opacity:.6}
 .reward.redeemed .ticket .dot{animation:none;background:#999}
@@ -118,7 +122,7 @@ footer a{color:var(--ink);text-underline-offset:3px}
 .sheet{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.7);display:flex;align-items:flex-end;justify-content:center}
 .sheet-in{width:100%;max-width:480px;background:var(--panel);border-radius:22px 22px 0 0;padding:18px 16px calc(20px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:14px;max-height:92%;overflow:auto}
 .sheet-head{display:flex;justify-content:space-between;align-items:center}
-.sheet-head h3{margin:0;font-family:var(--f-display);font-size:20px}
+.sheet-head h3{margin:0;font-family:var(--f-display);font-weight:var(--dw);font-size:22px}
 .x{background:var(--line);border:0;border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:18px}
 .cam{position:relative;width:100%;aspect-ratio:1;max-width:100%;background:#000;border-radius:16px;overflow:hidden;display:grid;place-items:center}
 .cam video{width:100%;height:100%;object-fit:cover}

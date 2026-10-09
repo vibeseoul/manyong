@@ -13,7 +13,7 @@ const T = {
  en:{eyebrow:"Halloween · Oct 26–31",title:"Find Manyong!",lead:"Our vampire Manyong is hiding in three spots in the store. Tap a shadow and scan the QR code when you find him.",
   found:"Found",tap:"Tap a shadow to open the camera.",slotOpen:"Still hiding",slotDone:"Found!",
   doneEyebrow:"All three found",doneTitle:"You caught Manyong!",sample:"SAMPLE",valid:"Valid until 31 Oct 2026",show:"Show this screen at the checkout",
-  hint:"Our staff will confirm it with a PIN.",staff:"Staff only · Redeem",pinLabel:"Staff PIN",pinWrong:"Wrong PIN.",pinLocked:"Too many tries. Please wait {s} s.",pinNoHttps:"PIN check needs a secure (https) page.",
+  hint:"Our staff will confirm it with a PIN.",staff:"I'm done!",pinLabel:"Staff PIN",pinWrong:"Wrong PIN.",pinLocked:"Too many tries. Please wait {s} s.",pinNoHttps:"PIN check needs a secure (https) page.",
   usedAt:"Redeemed ",stamp:"Redeemed",ended:"This promotion has ended.",redeemedToast:"Coupon redeemed",
   secretEyebrow:"Psst … secret",secretTitle:"There's one more: the golden Manyong.",secretHint:"Play “Don't Wake Manyong!” in the K-POP zone on the 1st floor. Win, and a secret QR code appears on the screen.",
   bonusEyebrow:"Secret found",bonusTitle:"Golden Manyong found!",bonusEarly:"Golden Manyong found! Find the other three to unlock it.",
@@ -26,7 +26,7 @@ const T = {
  de:{eyebrow:"Halloween · 26.–31. Oktober",title:"Finde Manyong!",lead:"Unser Vampir Manyong hat sich an drei Orten im Store versteckt. Tippe auf einen Schatten und scanne den QR-Code, wenn du ihn findest.",
   found:"Gefunden",tap:"Tippe auf einen Schatten, um die Kamera zu öffnen.",slotOpen:"Noch versteckt",slotDone:"Gefunden!",
   doneEyebrow:"Alle drei gefunden",doneTitle:"Manyong ist erwischt!",sample:"BEISPIEL",valid:"Gültig bis 31.10.2026",show:"Zeig diesen Bildschirm an der Kasse",
-  hint:"Unser Team bestätigt mit einer PIN.",staff:"Nur Personal · Einlösen",pinLabel:"Personal-PIN",pinWrong:"Falsche PIN.",pinLocked:"Zu viele Versuche. Bitte {s} Sek. warten.",pinNoHttps:"Die PIN-Prüfung braucht eine sichere (https) Seite.",
+  hint:"Unser Team bestätigt mit einer PIN.",staff:"Geschafft!",pinLabel:"Personal-PIN",pinWrong:"Falsche PIN.",pinLocked:"Zu viele Versuche. Bitte {s} Sek. warten.",pinNoHttps:"Die PIN-Prüfung braucht eine sichere (https) Seite.",
   usedAt:"Eingelöst am ",stamp:"Eingelöst",ended:"Diese Aktion ist beendet.",redeemedToast:"Coupon eingelöst",
   secretEyebrow:"Psst … geheim",secretTitle:"Da ist noch ein goldener Manyong.",secretHint:"Spiel „Weck Manyong nicht auf!“ in der K-POP-Zone im 1. OG. Wer gewinnt, bekommt einen geheimen QR-Code auf dem Bildschirm.",
   bonusEyebrow:"Geheimnis gelüftet",bonusTitle:"Goldener Manyong gefunden!",bonusEarly:"Goldener Manyong gefunden! Finde zuerst die anderen drei.",
@@ -39,7 +39,7 @@ const T = {
  ko:{eyebrow:"Halloween · 10월 26–31일",title:"숨은 마뇽을 찾아라!",lead:"뱀파이어 마뇽이 매장 세 곳에 숨었어요. 그림자를 누르고, 마뇽을 찾으면 옆의 QR을 찍어 주세요.",
   found:"찾은 마뇽",tap:"그림자를 누르면 카메라가 켜져요.",slotOpen:"숨어 있음",slotDone:"찾았다!",
   doneEyebrow:"세 마리 모두 찾음",doneTitle:"마뇽을 잡았어요!",sample:"예시",valid:"2026년 10월 31일까지 사용 가능",show:"계산대에서 이 화면을 보여 주세요",
-  hint:"직원이 PIN으로 확인해 드려요.",staff:"직원 전용 · 사용 처리",pinLabel:"직원 PIN",pinWrong:"PIN이 맞지 않아요.",pinLocked:"시도가 너무 많아요. {s}초 후에 다시 해 주세요.",pinNoHttps:"PIN 확인은 https 페이지에서만 돼요.",
+  hint:"직원이 PIN으로 확인해 드려요.",staff:"완료했어요",pinLabel:"직원 PIN",pinWrong:"PIN이 맞지 않아요.",pinLocked:"시도가 너무 많아요. {s}초 후에 다시 해 주세요.",pinNoHttps:"PIN 확인은 https 페이지에서만 돼요.",
   usedAt:"사용 완료 ",stamp:"사용 완료",ended:"이벤트가 끝났어요.",redeemedToast:"쿠폰 사용 완료",
   secretEyebrow:"쉿… 비밀",secretTitle:"황금 마뇽이 하나 더 있어요.",secretHint:"1층 K-POP존에서 ‘마뇽을 깨우지 마!’ 게임을 해 보세요. 성공하면 화면에 비밀 QR이 나타나요.",
   bonusEyebrow:"비밀을 찾았어요",bonusTitle:"황금 마뇽을 찾았어요!",bonusEarly:"황금 마뇽을 찾았어요! 나머지 세 마리를 먼저 찾아 주세요.",
@@ -53,7 +53,7 @@ const T = {
 
 const IMG = { s1:"img/s1.webp", s2:"img/s2.webp", s3:"img/s3.webp", c1:"img/c1.webp", c2:"img/c2.webp", c3:"img/c3.webp", gold:"img/gold.webp", sgold:"img/sgold.webp" };
 
-const fresh = () => ({ found: [], code: null, redeemed: null, bonusRedeemed: null, visited: false, pinFails: 0, lockUntil: 0 });
+const fresh = () => ({ found: [], code: null, redeemed: null, bonusRedeemed: null, visited: false, tester: false, pinFails: 0, lockUntil: 0 });
 let state = fresh();
 let lang = "en";
 const $ = s => document.querySelector(s);
@@ -88,7 +88,7 @@ let flushing = false;
 try { queue = JSON.parse(localStorage.getItem(Q_KEY)) || []; } catch (e) { queue = []; }
 function saveQ() { try { localStorage.setItem(Q_KEY, JSON.stringify(queue.slice(-50))); } catch (e) {} }
 function track(ev, extra) {
-  if (!CFG.sheetUrl) return;
+  if (!CFG.sheetUrl || state.tester) return;   // phones used for testing are not counted
   queue.push(Object.assign({ ev: ev, lang: lang, t: Date.now() }, extra || {}));
   saveQ(); flush();
 }
@@ -107,20 +107,23 @@ async function flush() {
 window.addEventListener("online", flush);
 
 /* ---------- PIN ---------- */
-async function pinOk(pin) {
+// Returns "staff", "reset" or false.
+async function pinKind(pin) {
   if (!window.crypto || !crypto.subtle) throw new Error("nohttps");
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("manyong:" + pin));
   const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
-  return hex === String(CFG.staffPinHash || "").toLowerCase();
+  if (hex === String(CFG.staffPinHash || "").toLowerCase()) return "staff";
+  if (CFG.resetPinHash && hex === String(CFG.resetPinHash).toLowerCase()) return "reset";
+  return false;
 }
 function lockLeft() { return Math.max(0, Math.ceil((state.lockUntil - Date.now()) / 1000)); }
 async function checkPin(pin, errEl, box) {
   errEl.textContent = "";
   const left = lockLeft();
   if (left) { errEl.textContent = t("pinLocked").replace("{s}", left); return false; }
-  let ok = false;
-  try { ok = await pinOk(pin); } catch (e) { errEl.textContent = t("pinNoHttps"); return false; }
-  if (ok) { state.pinFails = 0; save(); return true; }
+  let kind = false;
+  try { kind = /^\d{4}$/.test(pin) ? await pinKind(pin) : false; } catch (e) { errEl.textContent = t("pinNoHttps"); return false; }
+  if (kind) { state.pinFails = 0; save(); return kind; }
   state.pinFails = (state.pinFails || 0) + 1;
   if (state.pinFails >= 5) { state.pinFails = 0; state.lockUntil = Date.now() + 60000; }
   save();
@@ -128,27 +131,48 @@ async function checkPin(pin, errEl, box) {
   if (box) { box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake"); }
   return false;
 }
+// Back to the very start on this phone (testing). Not counted.
+function hardReset() {
+  state = Object.assign(fresh(), { visited: true, tester: true });
+  save();
+  Object.keys(coupons).forEach(k => { coupons[k].open = false; coupons[k].q("pinbox").hidden = true; });
+  $("#staffpanel").hidden = true;
+  if (location.hash) { try { history.replaceState(null, "", location.pathname); } catch (e) {} }
+  render(); window.scrollTo(0, 0); toast("✓");
+}
 
 /* ---------- coupons ---------- */
 const coupons = {};
 function buildCoupon(el, kind) {
   el.appendChild($("#couponTpl").content.cloneNode(true));
   const q = k => el.querySelector('[data-k="' + k + '"]');
-  const c = { el: el, kind: kind, q: q };
-  q("staff").addEventListener("click", () => {
-    q("staff").hidden = true; q("pinbox").hidden = false; q("pin").value = ""; q("pinerr").textContent = "";
+  const c = { el: el, kind: kind, q: q, open: false };
+  const openPad = () => {
+    c.open = true; q("staff").hidden = true; q("pinbox").hidden = false; q("pin").value = ""; q("pinerr").textContent = "";
     q("pin").focus();
-  });
-  q("cancel").addEventListener("click", () => { q("pinbox").hidden = true; q("staff").hidden = false; });
+  };
+  const closePad = () => { c.open = false; q("pinbox").hidden = true; renderCoupon(kind); };
+  q("staff").addEventListener("click", openPad);
+  q("stamp").addEventListener("click", openPad);   // used coupon: tap the stamp to open the PIN pad
+  q("ended").addEventListener("click", openPad);
+  q("cancel").addEventListener("click", closePad);
+  let busy = false;
   const submit = async () => {
+    if (busy) return;
+    busy = true;
     const pin = q("pin").value.trim();
-    if (!/^\d{4}$/.test(pin)) { q("pinerr").textContent = t("pinWrong"); return; }
-    const ok = await checkPin(pin, q("pinerr"), q("pinbox"));
+    const res = await checkPin(pin, q("pinerr"), q("pinbox"));
     q("pin").value = "";
-    if (!ok) return;
-    if (kind === "main") { state.redeemed = Date.now(); track("redeem", { code: state.code }); }
-    else { state.bonusRedeemed = Date.now(); track("bonus_redeem", { code: state.code }); }
-    save(); q("pinbox").hidden = true; render(); toast(t("redeemedToast"));
+    busy = false;
+    if (!res) return;
+    if (res === "reset") { hardReset(); return; }
+    const used = kind === "main" ? state.redeemed : state.bonusRedeemed;
+    if (!used && !ended()) {
+      if (kind === "main") { state.redeemed = Date.now(); track("redeem", { code: state.code }); }
+      else { state.bonusRedeemed = Date.now(); track("bonus_redeem", { code: state.code }); }
+      save(); toast(t("redeemedToast"));
+    }
+    c.open = false; q("pinbox").hidden = true; render();
   };
   q("ok").addEventListener("click", submit);
   q("pin").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); submit(); } });
@@ -182,8 +206,8 @@ function renderCoupon(kind) {
   q("ended").hidden = !isEnded;
   const canRedeem = !used && !isEnded;
   q("hint").hidden = !canRedeem;
-  if (!canRedeem) { q("staff").hidden = true; q("pinbox").hidden = true; }
-  else if (q("pinbox").hidden) q("staff").hidden = false;
+  q("pinbox").hidden = !c.open;
+  q("staff").hidden = c.open || !canRedeem;
 }
 
 /* ---------- render ---------- */
@@ -356,16 +380,12 @@ document.querySelectorAll(".langs button").forEach(b => b.addEventListener("clic
   lang = b.dataset.lang; try { localStorage.setItem(KEY + "-lang", lang); } catch (e) {} render();
 }));
 
-// Staff-only reset: open the page with #reset, enter the PIN.
+// Testing: open the page with #reset and enter the reset PIN (works at any point).
 async function doReset() {
-  const ok = await checkPin($("#resetPin").value.trim(), $("#resetErr"), $("#staffpanel"));
+  const res = await checkPin($("#resetPin").value.trim(), $("#resetErr"), $("#staffpanel"));
   $("#resetPin").value = "";
-  if (!ok) return;
-  const keep = { visited: state.visited };
-  state = Object.assign(fresh(), keep); save();
-  $("#staffpanel").hidden = true;
-  try { history.replaceState(null, "", location.pathname); } catch (e) {}
-  render(); toast(t("resetDone"));
+  if (res === "reset") hardReset();
+  else if (res) $("#resetErr").textContent = t("pinWrong");
 }
 $("#resetGo").addEventListener("click", doReset);
 $("#resetPin").addEventListener("keydown", e => { if (e.key === "Enter") doReset(); });
