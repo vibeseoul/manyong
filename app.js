@@ -134,20 +134,30 @@ function track(ev, extra) {
   flush();
 }
 // Sends one record. Returns "ok" (saved), "dup" (the sheet already had it) or "fail".
+const D_KEY = KEY + "-diag";
+function diag(res, info) {
+  try { localStorage.setItem(D_KEY, JSON.stringify({ t: Date.now(), res: res, info: String(info || "").slice(0, 120) })); } catch (e) {}
+  if (location.hash === "#status") showStatus();
+}
 async function post(item, ms) {
+  const r0 = await post0(item, ms);
+  diag(r0[0], r0[1]);
+  return r0[0];
+}
+async function post0(item, ms) {
   const ctl = typeof AbortController === "function" ? new AbortController() : null;
   const timer = ctl ? setTimeout(() => ctl.abort(), ms || 15000) : 0;
   try {
     const r = await fetch(CFG.sheetUrl, { method: "POST", redirect: "follow", signal: ctl ? ctl.signal : undefined,
       headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(item) });
-    if (!r.ok) return "fail";
+    if (!r.ok) return ["fail", "HTTP " + r.status];
     const txt = (await r.text()).trim();
     let j = null; try { j = JSON.parse(txt); } catch (e) {}
-    if (j && j.ok === true) return j.dup ? "dup" : "ok";
-    if (txt === "ok" || txt === "ignored") return "ok";   // older sheet script
-    return "fail";
+    if (j && j.ok === true) return [j.dup ? "dup" : "ok", txt];
+    if (txt === "ok" || txt === "ignored") return ["ok", txt];   // older sheet script
+    return ["fail", txt];
   } catch (e) {
-    return "fail";
+    return ["fail", (e && e.name) + ": " + (e && e.message)];
   } finally { if (timer) clearTimeout(timer); }
 }
 async function flush() {
@@ -512,7 +522,22 @@ load();
 loadQ();
 if (state.code && !state.doneAt) { state.doneAt = Date.now(); save(); }
 buildCoupon($("#reward"), "main");
-const checkHash = () => { if (location.hash === "#reset") { $("#staffpanel").hidden = false; window.scrollTo(0, 0); } };
+function showStatus() {
+  let d = null; try { d = JSON.parse(localStorage.getItem(D_KEY)); } catch (e) {}
+  const lines = [
+    "build: 10/12-b",
+    "sheet: " + (CFG.sheetUrl ? "on" : "off"),
+    "test phone (not counted): " + (state.tester ? "YES" : "no"),
+    "found: " + state.found.join(",") + (state.code ? " · " + state.code : ""),
+    "waiting to send: " + loadQ().length,
+    "last send: " + (d ? new Date(d.t).toLocaleTimeString() + " → " + d.res + " (" + d.info + ")" : "none")
+  ];
+  const el = $("#status"); el.textContent = lines.join("\n"); el.hidden = false;
+}
+const checkHash = () => {
+  if (location.hash === "#reset") { $("#staffpanel").hidden = false; window.scrollTo(0, 0); }
+  if (location.hash === "#status") { showStatus(); window.scrollTo(0, 0); }
+};
 checkHash();
 window.addEventListener("hashchange", checkHash);
 let params = null;
