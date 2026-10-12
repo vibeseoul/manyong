@@ -14,7 +14,7 @@ const T = {
   found:"Found",tap:"Tap a shadow to open the camera.",slotOpen:"Still hiding",slotDone:"Found!",
   doneEyebrow:"All three found",doneTitle:"You caught Manyong!",sample:"SAMPLE",valid:"Valid today only, until {time}",left:"{left} left",hurry:"Use it before Manyong takes it back!",expired:"Too late! Manyong took the coupon back. Coupons are only valid on the day you get them.",show:"Show this screen at the checkout",
   hint:"Our staff will confirm it with a PIN.",staff:"I'm done!",pinLabel:"Staff PIN",pinWrong:"Wrong PIN.",pinLocked:"Too many tries. Please wait {s} s.",pinNoHttps:"PIN check needs a secure (https) page.",
-  usedAt:"Redeemed ",stamp:"Redeemed",ended:"This promotion has ended.",redeemedToast:"Coupon redeemed",
+  usedAt:"Redeemed ",stamp:"Redeemed",ended:"This promotion has ended.",redeemedToast:"Coupon redeemed",alreadyUsed:"This coupon has already been used.",checking:"Checking …",
   secretEyebrow:"Psst … secret",secretTitle:"There's one more: the golden Manyong.",secretHint:"Play “Don't Wake Manyong!” in the K-POP zone on the 1st floor. Win, and a secret QR code appears on the screen. Scan it to upgrade your coupon.",
   upEyebrow:"Upgraded by the golden Manyong",upDone:"Your coupon is upgraded. Use it today!",upLate:"Your coupon was already used, so it can't be upgraded any more.",bonusEarly:"Golden Manyong found! Find the other three and your coupon will be upgraded.",
   s1:"Find the three hidden Manyongs in the store.",s2:"Tap a shadow here and scan the QR code next to him.",s3:"Found all three? Your coupon is valid today only, so show it at the checkout before we close.",
@@ -27,7 +27,7 @@ const T = {
   found:"Gefunden",tap:"Tippe auf einen Schatten, um die Kamera zu öffnen.",slotOpen:"Noch versteckt",slotDone:"Gefunden!",
   doneEyebrow:"Alle drei gefunden",doneTitle:"Manyong ist erwischt!",sample:"BEISPIEL",valid:"Nur heute gültig, bis {time} Uhr",left:"Noch {left}",hurry:"Schnell, bevor Manyong ihn zurückholt!",expired:"Zu spät! Manyong hat den Coupon zurückgeholt. Coupons gelten nur an dem Tag, an dem du sie bekommst.",show:"Zeig diesen Bildschirm an der Kasse",
   hint:"Unser Team bestätigt mit einer PIN.",staff:"Geschafft!",pinLabel:"Personal-PIN",pinWrong:"Falsche PIN.",pinLocked:"Zu viele Versuche. Bitte {s} Sek. warten.",pinNoHttps:"Die PIN-Prüfung braucht eine sichere (https) Seite.",
-  usedAt:"Eingelöst am ",stamp:"Eingelöst",ended:"Diese Aktion ist beendet.",redeemedToast:"Coupon eingelöst",
+  usedAt:"Eingelöst am ",stamp:"Eingelöst",ended:"Diese Aktion ist beendet.",redeemedToast:"Coupon eingelöst",alreadyUsed:"Dieser Coupon wurde schon eingelöst.",checking:"Wird geprüft …",
   secretEyebrow:"Psst … geheim",secretTitle:"Da ist noch ein goldener Manyong.",secretHint:"Spiel „Weck Manyong nicht auf!“ in der K-POP-Zone im 1. OG. Wer gewinnt, bekommt einen geheimen QR-Code auf dem Bildschirm. Scann ihn und dein Coupon wird aufgewertet.",
   upEyebrow:"Vom goldenen Manyong aufgewertet",upDone:"Dein Coupon ist aufgewertet. Lös ihn heute ein!",upLate:"Dein Coupon wurde schon eingelöst und kann nicht mehr aufgewertet werden.",bonusEarly:"Goldener Manyong gefunden! Finde die anderen drei, dann wird dein Coupon aufgewertet.",
   s1:"Finde die drei versteckten Manyongs im Store.",s2:"Tippe hier auf einen Schatten und scanne den QR-Code daneben.",s3:"Alle drei gefunden? Dein Coupon gilt nur heute – zeig ihn an der Kasse, bevor wir schließen.",
@@ -40,7 +40,7 @@ const T = {
   found:"찾은 마뇽",tap:"그림자를 누르면 카메라가 켜져요.",slotOpen:"숨어 있음",slotDone:"찾았다!",
   doneEyebrow:"세 마리 모두 찾음",doneTitle:"마뇽을 잡았어요!",sample:"예시",valid:"오늘 {time}까지만 사용 가능",left:"남은 시간 {left}",hurry:"마뇽이 쿠폰을 도로 가져가기 전에 서둘러요!",expired:"앗, 늦었어요! 마뇽이 쿠폰을 도로 가져갔어요. 쿠폰은 받은 날에만 쓸 수 있어요.",show:"계산대에서 이 화면을 보여 주세요",
   hint:"직원이 PIN으로 확인해 드려요.",staff:"완료했어요",pinLabel:"직원 PIN",pinWrong:"PIN이 맞지 않아요.",pinLocked:"시도가 너무 많아요. {s}초 후에 다시 해 주세요.",pinNoHttps:"PIN 확인은 https 페이지에서만 돼요.",
-  usedAt:"사용 완료 ",stamp:"사용 완료",ended:"이벤트가 끝났어요.",redeemedToast:"쿠폰 사용 완료",
+  usedAt:"사용 완료 ",stamp:"사용 완료",ended:"이벤트가 끝났어요.",redeemedToast:"쿠폰 사용 완료",alreadyUsed:"이미 사용된 쿠폰이에요.",checking:"확인 중…",
   secretEyebrow:"쉿… 비밀",secretTitle:"황금 마뇽이 하나 더 있어요.",secretHint:"1층 K-POP존에서 ‘마뇽을 깨우지 마!’ 게임을 해 보세요. 성공하면 화면에 비밀 QR이 나타나고, 찍으면 쿠폰이 업그레이드돼요.",
   upEyebrow:"황금 마뇽 업그레이드",upDone:"쿠폰이 업그레이드됐어요. 오늘 꼭 쓰세요!",upLate:"쿠폰을 이미 사용해서 업그레이드할 수 없어요.",bonusEarly:"황금 마뇽을 찾았어요! 나머지 세 마리를 찾으면 쿠폰이 업그레이드돼요.",
   s1:"매장에 숨은 마뇽 세 마리를 찾아요.",s2:"여기서 그림자를 누르고 옆의 QR을 찍어요.",s3:"다 찾았다면 계산대에서 화면을 보여 주세요. 쿠폰은 받은 날 문 닫기 전까지만 쓸 수 있어요!",
@@ -66,6 +66,10 @@ function load() {
   lang = T[n] ? n : "en";
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+// Re-read what another tab of this phone may have saved (keeps the in-memory state if storage is unavailable).
+function reload() {
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && Array.isArray(s.found)) state = Object.assign(fresh(), s); } catch (e) {}
+}
 const t = k => (T[lang][k] != null ? T[lang][k] : T.en[k]);
 const has = n => state.found.includes(n);
 const mainDone = () => [1, 2, 3].every(has);
@@ -108,28 +112,60 @@ function newCode() {
 }
 
 /* ---------- anonymous counting (Google Sheet) ---------- */
+// Every record carries its own id. It leaves the phone's queue only after the sheet answers that it
+// was saved; anything else is sent again later, and the sheet skips ids (and coupon uses) it already has.
+const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
 let queue = [];
-let flushing = false;
-try { queue = JSON.parse(localStorage.getItem(Q_KEY)) || []; } catch (e) { queue = []; }
-function saveQ() { try { localStorage.setItem(Q_KEY, JSON.stringify(queue.slice(-50))); } catch (e) {} }
+let flushing = false, flushAgain = false;
+function loadQ() {
+  try {
+    const q = JSON.parse(localStorage.getItem(Q_KEY));
+    if (Array.isArray(q)) queue = q;
+  } catch (e) {}
+  queue.forEach(x => { if (!x.id) x.id = newId(); });
+  return queue;
+}
+function saveQ() { try { localStorage.setItem(Q_KEY, JSON.stringify(queue.slice(-300))); } catch (e) {} }
+function enqueue(item) { loadQ(); queue.push(item); saveQ(); }
+function dequeue(id) { loadQ(); queue = queue.filter(x => x.id !== id); saveQ(); }
 function track(ev, extra) {
   if (!CFG.sheetUrl || state.tester) return;   // phones used for testing are not counted
-  queue.push(Object.assign({ ev: ev, lang: lang, t: Date.now() }, extra || {}));
-  saveQ(); flush();
+  enqueue(Object.assign({ ev: ev, lang: lang, t: Date.now(), id: newId() }, extra || {}));
+  flush();
+}
+// Sends one record. Returns "ok" (saved), "dup" (the sheet already had it) or "fail".
+async function post(item, ms) {
+  const ctl = typeof AbortController === "function" ? new AbortController() : null;
+  const timer = ctl ? setTimeout(() => ctl.abort(), ms || 15000) : 0;
+  try {
+    const r = await fetch(CFG.sheetUrl, { method: "POST", redirect: "follow", signal: ctl ? ctl.signal : undefined,
+      headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(item) });
+    if (!r.ok) return "fail";
+    const txt = (await r.text()).trim();
+    let j = null; try { j = JSON.parse(txt); } catch (e) {}
+    if (j && j.ok === true) return j.dup ? "dup" : "ok";
+    if (txt === "ok" || txt === "ignored") return "ok";   // older sheet script
+    return "fail";
+  } catch (e) {
+    return "fail";
+  } finally { if (timer) clearTimeout(timer); }
 }
 async function flush() {
-  if (flushing || !queue.length || !CFG.sheetUrl) return;
+  if (!CFG.sheetUrl) return;
+  if (flushing) { flushAgain = true; return; }
   flushing = true;
-  while (queue.length) {
-    try {
-      await fetch(CFG.sheetUrl, { method: "POST", mode: "no-cors", keepalive: true,
-        headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(queue[0]) });
-      queue.shift(); saveQ();
-    } catch (e) { break; }
-  }
+  do {
+    flushAgain = false;
+    for (const item of loadQ().slice()) {
+      const res = await post(item);
+      if (res === "fail") { flushAgain = false; break; }   // keep it; try again later
+      dequeue(item.id);
+    }
+  } while (flushAgain);
   flushing = false;
 }
 window.addEventListener("online", flush);
+setInterval(() => { if (loadQ().length) flush(); }, 30000);
 
 /* ---------- PIN ---------- */
 // Returns "staff", "reset" or false.
@@ -188,17 +224,35 @@ function buildCoupon(el, kind) {
     const pin = q("pin").value.trim();
     const res = await checkPin(pin, q("pinerr"), q("pinbox"));
     q("pin").value = "";
-    busy = false;
-    if (!res) return;
-    if (res === "reset") { hardReset(); return; }
-    if (!state.redeemed && Date.now() < deadline()) {
-      state.redeemed = Date.now();
-      state.redeemedUp = has(4);
-      track("redeem", { code: state.code });
-      if (state.redeemedUp) track("bonus_redeem", { code: state.code });   // upgraded coupon used
-      save(); toast(t("redeemedToast"));
+    if (!res) { busy = false; return; }
+    if (res === "reset") { busy = false; hardReset(); return; }
+    reload();   // another tab may have used it already
+    if (state.redeemed) {
+      busy = false; c.open = false; q("pinbox").hidden = true; render(); toast(t("alreadyUsed")); return;
     }
-    c.open = false; q("pinbox").hidden = true; render();
+    if (Date.now() >= deadline()) { busy = false; c.open = false; q("pinbox").hidden = true; render(); return; }
+    const up = has(4);
+    const item = { ev: "redeem", code: state.code, lang: lang, t: Date.now(), id: newId() };
+    let ans = "skip";
+    if (CFG.sheetUrl && !state.tester) {
+      // Ask the sheet first: each coupon code can be used once. With no answer (no signal) the
+      // coupon is still redeemed on this phone and the record is sent later.
+      q("ok").disabled = true; q("pinerr").textContent = t("checking");
+      ans = await post(item, 6000);
+      q("ok").disabled = false; q("pinerr").textContent = "";
+    }
+    reload();
+    if (ans === "dup" || state.redeemed) {
+      state.redeemed = state.redeemed || Date.now(); save();
+      busy = false; c.open = false; q("pinbox").hidden = true; render(); toast(t("alreadyUsed")); return;
+    }
+    state.redeemed = Date.now();
+    state.redeemedUp = up;
+    save();
+    if (ans === "fail") { enqueue(item); flush(); }
+    if (up) track("bonus_redeem", { code: state.code });   // upgraded coupon used
+    toast(t("redeemedToast"));
+    busy = false; c.open = false; q("pinbox").hidden = true; render();
   };
   q("ok").addEventListener("click", submit);
   q("pin").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); submit(); } });
@@ -320,6 +374,7 @@ function tokenFrom(text) {
   return v.toUpperCase().replace(/[^A-Z0-9]/g, "");
 }
 function collect(raw, fromUrl) {
+  reload();
   const tok = tokenFrom(raw);
   if (tok === "POP") { closeScanner(); toast(t("entrance")); return true; }
   const n = CODES[tok];
@@ -443,8 +498,18 @@ async function doReset() {
 $("#resetGo").addEventListener("click", doReset);
 $("#resetPin").addEventListener("keydown", e => { if (e.key === "Enter") doReset(); });
 
+// Another tab of this phone changed something (found, redeemed, reset): show it here too.
+window.addEventListener("storage", e => {
+  if (e.key !== KEY) return;
+  reload();
+  Object.keys(coupons).forEach(k => { coupons[k].open = false; coupons[k].q("pinbox").hidden = true; });
+  render();
+});
+document.addEventListener("visibilitychange", () => { if (!document.hidden) { reload(); render(); flush(); } });
+
 /* ---------- boot ---------- */
 load();
+loadQ();
 if (state.code && !state.doneAt) { state.doneAt = Date.now(); save(); }
 buildCoupon($("#reward"), "main");
 const checkHash = () => { if (location.hash === "#reset") { $("#staffpanel").hidden = false; window.scrollTo(0, 0); } };
