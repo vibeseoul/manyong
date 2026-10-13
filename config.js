@@ -26,16 +26,16 @@ window.MANYONG_CONFIG = {
 
   // 마뇽 3마리를 모두 찾았을 때 혜택
   offer: {
-    en: "10% off your purchase today",
-    de: "10 % auf deinen Einkauf heute",
-    ko: "오늘 구매 10% 할인"
+    en: "5% off your purchase today",
+    de: "5 % auf deinen Einkauf heute",
+    ko: "오늘 구매 5% 할인"
   },
 
-  // 황금 마뇽(게임 클리어)을 찾으면 위 쿠폰이 이 혜택으로 업그레이드됩니다
-  // (같은 쿠폰, 같은 사용 기한 · 아직 사용하지 않은 쿠폰만)
-  upgradeOffer: {
-    en: "15% off your purchase today",
-    de: "15 % auf deinen Einkauf heute",
-    ko: "오늘 구매 15% 할인"
+  // 황금 마뇽(게임 클리어) 혜택: 매장 카페 음료 1잔 할인, 사용 기한 없음
+  // (마뇽 3마리를 모두 찾은 뒤에 열립니다)
+  bonusOffer: {
+    en: "15% off one drink at our café",
+    de: "15 % auf ein Getränk in unserem Café",
+    ko: "카페 음료 1잔 15% 할인"
   }
 };

@@ -15,45 +15,45 @@ const T = {
   doneEyebrow:"All three found",doneTitle:"You caught Manyong!",sample:"SAMPLE",valid:"Valid today only, until {time}",left:"{left} left",hurry:"Use it before Manyong takes it back!",expired:"Too late! Manyong took the coupon back. Coupons are only valid on the day you get them.",show:"Show this screen at the checkout",
   hint:"Our staff will confirm it with a PIN.",staff:"I'm done!",pinLabel:"Staff PIN",pinWrong:"Wrong PIN.",pinLocked:"Too many tries. Please wait {s} s.",pinNoHttps:"PIN check needs a secure (https) page.",
   usedAt:"Redeemed ",stamp:"Redeemed",ended:"This promotion has ended.",redeemedToast:"Coupon redeemed",alreadyUsed:"This coupon has already been used.",checking:"Checking …",
-  secretEyebrow:"Psst … secret",secretTitle:"There's one more: the golden Manyong.",secretHint:"Play “Don't Wake Manyong!” in the K-POP zone on the 1st floor. Win, and a secret QR code appears on the screen. Scan it to upgrade your coupon.",
-  upEyebrow:"Upgraded by the golden Manyong",upDone:"Your coupon is upgraded. Use it today!",upLate:"Your coupon was already used, so it can't be upgraded any more.",bonusEarly:"Golden Manyong found! Find the other three and your coupon will be upgraded.",
+  secretEyebrow:"Psst … secret",secretTitle:"There's one more: the golden Manyong.",secretHint:"Play “Don't Wake Manyong!” in the K-POP zone on the 1st floor. Win, and a secret QR code appears on the screen. Scan it for a café coupon.",
+  bonusEyebrow:"Secret found",bonusTitle:"Golden Manyong found!",bonusValid:"At our café · no expiry date",showCafe:"Show this screen at the café counter",bonusEarly:"Golden Manyong found! Find the other three to unlock your café coupon.",
   s1:"Find the three hidden Manyongs in the store.",s2:"Tap a shadow here and scan the QR code next to him.",s3:"Found all three? Your coupon is valid today only, so show it at the checkout before we close.",
   foot:"vibe seoul · Zeil 68, Frankfurt",privacy:"No personal data. We only count anonymously how many people take part. Your progress stays on this phone.",
   scanTitle:"Scan the QR code",photo:"📷 Take a photo of the QR code",or:"or enter the code",
   camStarting:"Starting camera …",camFail:"Camera not available. Take a photo of the QR code or type the code below.",noQr:"No QR code found. Try closer, with more light.",
-  wrong:"That's not a Manyong code.",already:"You already found this one!",gotIt:"Found! ",bonusGot:"Golden Manyong found! Your coupon is upgraded.",entrance:"You're already here. Now find the hidden Manyongs!",
+  wrong:"That's not a Manyong code.",already:"You already found this one!",gotIt:"Found! ",bonusGot:"Golden Manyong found! Here's your café coupon.",entrance:"You're already here. Now find the hidden Manyongs!",
   resetTitle:"Staff: reset this phone",resetBtn:"Reset",resetDone:"Reset done."},
  de:{eyebrow:"Halloween · 26.–31. Oktober",title:"Finde Manyong!",lead:"Unser Vampir Manyong hat sich an drei Orten im Store versteckt. Tippe auf einen Schatten und scanne den QR-Code, wenn du ihn findest.",
   found:"Gefunden",tap:"Tippe auf einen Schatten, um die Kamera zu öffnen.",slotOpen:"Noch versteckt",slotDone:"Gefunden!",
   doneEyebrow:"Alle drei gefunden",doneTitle:"Manyong ist erwischt!",sample:"BEISPIEL",valid:"Nur heute gültig, bis {time} Uhr",left:"Noch {left}",hurry:"Schnell, bevor Manyong ihn zurückholt!",expired:"Zu spät! Manyong hat den Coupon zurückgeholt. Coupons gelten nur an dem Tag, an dem du sie bekommst.",show:"Zeig diesen Bildschirm an der Kasse",
   hint:"Unser Team bestätigt mit einer PIN.",staff:"Geschafft!",pinLabel:"Personal-PIN",pinWrong:"Falsche PIN.",pinLocked:"Zu viele Versuche. Bitte {s} Sek. warten.",pinNoHttps:"Die PIN-Prüfung braucht eine sichere (https) Seite.",
   usedAt:"Eingelöst am ",stamp:"Eingelöst",ended:"Diese Aktion ist beendet.",redeemedToast:"Coupon eingelöst",alreadyUsed:"Dieser Coupon wurde schon eingelöst.",checking:"Wird geprüft …",
-  secretEyebrow:"Psst … geheim",secretTitle:"Da ist noch ein goldener Manyong.",secretHint:"Spiel „Weck Manyong nicht auf!“ in der K-POP-Zone im 1. OG. Wer gewinnt, bekommt einen geheimen QR-Code auf dem Bildschirm. Scann ihn und dein Coupon wird aufgewertet.",
-  upEyebrow:"Vom goldenen Manyong aufgewertet",upDone:"Dein Coupon ist aufgewertet. Lös ihn heute ein!",upLate:"Dein Coupon wurde schon eingelöst und kann nicht mehr aufgewertet werden.",bonusEarly:"Goldener Manyong gefunden! Finde die anderen drei, dann wird dein Coupon aufgewertet.",
+  secretEyebrow:"Psst … geheim",secretTitle:"Da ist noch ein goldener Manyong.",secretHint:"Spiel „Weck Manyong nicht auf!“ in der K-POP-Zone im 1. OG. Wer gewinnt, bekommt einen geheimen QR-Code auf dem Bildschirm. Scann ihn für einen Café-Coupon.",
+  bonusEyebrow:"Geheimnis gelüftet",bonusTitle:"Goldener Manyong gefunden!",bonusValid:"In unserem Café · ohne Ablaufdatum",showCafe:"Zeig diesen Bildschirm an der Café-Theke",bonusEarly:"Goldener Manyong gefunden! Finde die anderen drei, dann gibt es deinen Café-Coupon.",
   s1:"Finde die drei versteckten Manyongs im Store.",s2:"Tippe hier auf einen Schatten und scanne den QR-Code daneben.",s3:"Alle drei gefunden? Dein Coupon gilt nur heute – zeig ihn an der Kasse, bevor wir schließen.",
   foot:"vibe seoul · Zeil 68, Frankfurt",privacy:"Keine persönlichen Daten. Wir zählen nur anonym, wie viele mitmachen. Dein Fortschritt bleibt auf diesem Handy.",
   scanTitle:"QR-Code scannen",photo:"📷 Foto vom QR-Code machen",or:"oder Code eingeben",
   camStarting:"Kamera startet …",camFail:"Kamera nicht verfügbar. Mach ein Foto vom QR-Code oder gib den Code darunter ein.",noQr:"Kein QR-Code erkannt. Versuch es näher und mit mehr Licht.",
-  wrong:"Das ist kein Manyong-Code.",already:"Diesen Manyong hast du schon!",gotIt:"Gefunden! ",bonusGot:"Goldener Manyong gefunden! Dein Coupon ist aufgewertet.",entrance:"Du bist schon hier. Jetzt such die versteckten Manyongs!",
+  wrong:"Das ist kein Manyong-Code.",already:"Diesen Manyong hast du schon!",gotIt:"Gefunden! ",bonusGot:"Goldener Manyong gefunden! Hier ist dein Café-Coupon.",entrance:"Du bist schon hier. Jetzt such die versteckten Manyongs!",
   resetTitle:"Personal: dieses Handy zurücksetzen",resetBtn:"Zurücksetzen",resetDone:"Zurückgesetzt."},
  ko:{eyebrow:"Halloween · 10월 26–31일",title:"숨은 마뇽을 찾아라!",lead:"뱀파이어 마뇽이 매장 세 곳에 숨었어요. 그림자를 누르고, 마뇽을 찾으면 옆의 QR을 찍어 주세요.",
   found:"찾은 마뇽",tap:"그림자를 누르면 카메라가 켜져요.",slotOpen:"숨어 있음",slotDone:"찾았다!",
   doneEyebrow:"세 마리 모두 찾음",doneTitle:"마뇽을 잡았어요!",sample:"예시",valid:"오늘 {time}까지만 사용 가능",left:"남은 시간 {left}",hurry:"마뇽이 쿠폰을 도로 가져가기 전에 서둘러요!",expired:"앗, 늦었어요! 마뇽이 쿠폰을 도로 가져갔어요. 쿠폰은 받은 날에만 쓸 수 있어요.",show:"계산대에서 이 화면을 보여 주세요",
   hint:"직원이 PIN으로 확인해 드려요.",staff:"완료했어요",pinLabel:"직원 PIN",pinWrong:"PIN이 맞지 않아요.",pinLocked:"시도가 너무 많아요. {s}초 후에 다시 해 주세요.",pinNoHttps:"PIN 확인은 https 페이지에서만 돼요.",
   usedAt:"사용 완료 ",stamp:"사용 완료",ended:"이벤트가 끝났어요.",redeemedToast:"쿠폰 사용 완료",alreadyUsed:"이미 사용된 쿠폰이에요.",checking:"확인 중…",
-  secretEyebrow:"쉿… 비밀",secretTitle:"황금 마뇽이 하나 더 있어요.",secretHint:"1층 K-POP존에서 ‘마뇽을 깨우지 마!’ 게임을 해 보세요. 성공하면 화면에 비밀 QR이 나타나고, 찍으면 쿠폰이 업그레이드돼요.",
-  upEyebrow:"황금 마뇽 업그레이드",upDone:"쿠폰이 업그레이드됐어요. 오늘 꼭 쓰세요!",upLate:"쿠폰을 이미 사용해서 업그레이드할 수 없어요.",bonusEarly:"황금 마뇽을 찾았어요! 나머지 세 마리를 찾으면 쿠폰이 업그레이드돼요.",
+  secretEyebrow:"쉿… 비밀",secretTitle:"황금 마뇽이 하나 더 있어요.",secretHint:"1층 K-POP존에서 ‘마뇽을 깨우지 마!’ 게임을 해 보세요. 성공하면 화면에 비밀 QR이 나타나고, 찍으면 카페 쿠폰을 받아요.",
+  bonusEyebrow:"비밀을 찾았어요",bonusTitle:"황금 마뇽을 찾았어요!",bonusValid:"매장 카페에서 사용 · 사용 기한 없음",showCafe:"카페 카운터에서 이 화면을 보여 주세요",bonusEarly:"황금 마뇽을 찾았어요! 나머지 세 마리를 찾으면 카페 쿠폰이 열려요.",
   s1:"매장에 숨은 마뇽 세 마리를 찾아요.",s2:"여기서 그림자를 누르고 옆의 QR을 찍어요.",s3:"다 찾았다면 계산대에서 화면을 보여 주세요. 쿠폰은 받은 날 문 닫기 전까지만 쓸 수 있어요!",
   foot:"vibe seoul · Zeil 68, Frankfurt",privacy:"개인정보는 받지 않아요. 참여 인원만 익명으로 집계하고, 진행 기록은 이 휴대폰에만 남아요.",
   scanTitle:"QR 찍기",photo:"📷 QR 사진 찍기",or:"또는 코드 입력",
   camStarting:"카메라를 켜는 중…",camFail:"카메라를 쓸 수 없어요. QR 사진을 찍거나 아래에 코드를 입력해 주세요.",noQr:"QR을 찾지 못했어요. 더 가까이, 밝은 곳에서 찍어 주세요.",
-  wrong:"마뇽 코드가 아니에요.",already:"이미 찾은 마뇽이에요!",gotIt:"찾았다! ",bonusGot:"황금 마뇽을 찾았어요! 쿠폰이 업그레이드됐어요.",entrance:"이미 들어와 있어요. 이제 숨은 마뇽을 찾아보세요!",
+  wrong:"마뇽 코드가 아니에요.",already:"이미 찾은 마뇽이에요!",gotIt:"찾았다! ",bonusGot:"황금 마뇽을 찾았어요! 카페 쿠폰을 받았어요.",entrance:"이미 들어와 있어요. 이제 숨은 마뇽을 찾아보세요!",
   resetTitle:"직원용: 이 휴대폰 기록 초기화",resetBtn:"초기화",resetDone:"초기화했어요."}
 };
 
 const IMG = { s1:"img/s1.webp", s2:"img/s2.webp", s3:"img/s3.webp", c1:"img/c1.webp", c2:"img/c2.webp", c3:"img/c3.webp", gold:"img/gold.webp", sgold:"img/sgold.webp" };
 
-const fresh = () => ({ found: [], code: null, doneAt: null, bonusAt: null, redeemed: null, redeemedUp: false, visited: false, tester: false, pinFails: 0, lockUntil: 0 });
+const fresh = () => ({ found: [], code: null, doneAt: null, bonusAt: null, redeemed: null, bonusRedeemed: null, visited: false, tester: false, pinFails: 0, lockUntil: 0 });
 let state = fresh();
 let lang = "en";
 const $ = s => document.querySelector(s);
@@ -93,9 +93,13 @@ function dayDeadline(ts, until) {
   const d = new Date(ts); const hm = until.split(":"); d.setHours(+hm[0], +hm[1], 0, 0); return d.getTime();
 }
 // coupon: same day until closing
-function deadline() { return Math.min(ENDS, state.doneAt ? dayDeadline(state.doneAt, UNTIL) : Infinity); }
-// golden Manyong upgrades the coupon, as long as it hasn't been used without it
-const upgraded = () => has(4) && (!state.redeemed || !!state.redeemedUp);
+// store coupon: same day until closing · golden café coupon: no expiry date
+function deadline(kind) {
+  if (kind === "bonus") return Infinity;
+  return Math.min(ENDS, state.doneAt ? dayDeadline(state.doneAt, UNTIL) : Infinity);
+}
+const USED = { main: "redeemed", bonus: "bonusRedeemed" };
+const EV = { main: "redeem", bonus: "bonus_redeem" };
 function fmtLeft(ms) {
   const s = Math.max(0, Math.floor(ms / 1000));
   const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
@@ -222,7 +226,7 @@ function buildCoupon(el, kind) {
     c.open = true; q("staff").hidden = true; q("pinbox").hidden = false; q("pin").value = ""; q("pinerr").textContent = "";
     q("pin").focus();
   };
-  const closePad = () => { c.open = false; q("pinbox").hidden = true; renderCoupon(); };
+  const closePad = () => { c.open = false; q("pinbox").hidden = true; renderCoupon(kind); };
   q("staff").addEventListener("click", openPad);
   q("stamp").addEventListener("click", openPad);   // used coupon: tap the stamp to open the PIN pad
   q("ended").addEventListener("click", openPad);
@@ -237,12 +241,11 @@ function buildCoupon(el, kind) {
     if (!res) { busy = false; return; }
     if (res === "reset") { busy = false; hardReset(); return; }
     reload();   // another tab may have used it already
-    if (state.redeemed) {
-      busy = false; c.open = false; q("pinbox").hidden = true; render(); toast(t("alreadyUsed")); return;
-    }
-    if (Date.now() >= deadline()) { busy = false; c.open = false; q("pinbox").hidden = true; render(); return; }
-    const up = has(4);
-    const item = { ev: "redeem", code: state.code, lang: lang, t: Date.now(), id: newId() };
+    const key = USED[kind];
+    const done_ = msg => { busy = false; c.open = false; q("pinbox").hidden = true; render(); if (msg) toast(msg); };
+    if (state[key]) return done_(t("alreadyUsed"));
+    if (Date.now() >= deadline(kind)) return done_();
+    const item = { ev: EV[kind], code: state.code, lang: lang, t: Date.now(), id: newId() };
     let ans = "skip";
     if (CFG.sheetUrl && !state.tester) {
       // Ask the sheet first: each coupon code can be used once. With no answer (no signal) the
@@ -252,45 +255,39 @@ function buildCoupon(el, kind) {
       q("ok").disabled = false; q("pinerr").textContent = "";
     }
     reload();
-    if (ans === "dup" || state.redeemed) {
-      state.redeemed = state.redeemed || Date.now(); save();
-      busy = false; c.open = false; q("pinbox").hidden = true; render(); toast(t("alreadyUsed")); return;
+    if (ans === "dup" || state[key]) {
+      state[key] = state[key] || Date.now(); save();
+      return done_(t("alreadyUsed"));
     }
-    state.redeemed = Date.now();
-    state.redeemedUp = up;
+    state[key] = Date.now();
     save();
     if (ans === "fail") { enqueue(item); flush(); }
-    if (up) track("bonus_redeem", { code: state.code });   // upgraded coupon used
-    toast(t("redeemedToast"));
-    busy = false; c.open = false; q("pinbox").hidden = true; render();
+    done_(t("redeemedToast"));
   };
   q("ok").addEventListener("click", submit);
   q("pin").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); submit(); } });
   q("pin").addEventListener("input", () => { if (q("pin").value.length === 4) submit(); });
   coupons[kind] = c;
 }
-function renderCoupon() {
-  const c = coupons.main, q = c.q;
-  const used = state.redeemed;
-  const up = upgraded();
-  const offer = (up ? CFG.upgradeOffer : CFG.offer) || CFG.offer || {};
-  const base = CFG.offer || {};
-  c.el.classList.toggle("gold", up);
-  q("eyebrow").textContent = up ? t("upEyebrow") : t("doneEyebrow");
-  q("title").textContent = t("doneTitle");
-  q("img").src = up ? IMG.gold : IMG.c3;
+function renderCoupon(kind) {
+  const c = coupons[kind], q = c.q, main = kind === "main";
+  const used = state[USED[kind]];
+  const offer = (main ? CFG.offer : CFG.bonusOffer) || {};
+  c.el.classList.toggle("gold", !main);
+  q("eyebrow").textContent = main ? t("doneEyebrow") : t("bonusEyebrow");
+  q("title").textContent = main ? t("doneTitle") : t("bonusTitle");
+  q("img").src = main ? IMG.c3 : IMG.gold;
   q("offer").textContent = offer[lang] || offer.en || "";
-  q("was").textContent = up ? (base[lang] || base.en || "") : "";
-  q("was").hidden = !up;
+  q("was").hidden = true;
   q("sample").textContent = t("sample");
   q("sample").hidden = !CFG.sample;
-  q("valid").textContent = t("valid").replace("{time}", UNTIL);
-  q("show").textContent = t("show");
+  q("valid").textContent = main ? t("valid").replace("{time}", UNTIL) : t("bonusValid");
+  q("show").textContent = main ? t("show") : t("showCafe");
   q("code").textContent = state.code || "";
   q("staff").textContent = t("staff");
   q("pinLabel").textContent = t("pinLabel");
   q("stamp").textContent = t("stamp");
-  const dl = deadline(), now = Date.now();
+  const dl = deadline(kind), now = Date.now();
   const isExpired = !used && now >= dl;
   q("ended").textContent = ended() ? t("ended") : t("expired");
   c.el.classList.toggle("redeemed", !!used);
@@ -300,9 +297,9 @@ function renderCoupon() {
   if (used) q("used").textContent = t("usedAt") + fmt(used);
   q("ended").hidden = !isExpired;
   q("valid").hidden = !!used || isExpired;
-  q("timer").hidden = !!used || isExpired;
+  q("timer").hidden = !main || !!used || isExpired;   // the café coupon has no countdown
   q("hurry").textContent = t("hurry");
-  c.deadline = dl; c.live = !used && !isExpired;
+  c.deadline = dl; c.live = main && !used && !isExpired;
   const canRedeem = !used && !isExpired;
   q("hint").textContent = t("hint");
   q("hint").hidden = !canRedeem;
@@ -341,15 +338,12 @@ function render() {
   $("#secret").hidden = !done;
   $("#steps").hidden = done;
   $("#tapnote").hidden = done;
-  if (done) renderCoupon();
+  if (done) renderCoupon("main");
   const g = has(4), p4 = $("#plate4");
   p4.classList.toggle("found", g);
   p4.querySelector("img").src = g ? IMG.gold : IMG.sgold;
-  const note = $("#secretNote");
-  const live = done && !state.redeemed && Date.now() < deadline();
-  const msg = !g ? "" : (live ? t("upDone") : (state.redeemed && !state.redeemedUp ? t("upLate") : ""));
-  note.textContent = msg; note.hidden = !msg;
-  $("#secretHint").hidden = g;
+  $("#bonus").hidden = !(g && done);
+  if (g && done) renderCoupon("bonus");
   tick();
 }
 function tick() {
@@ -402,11 +396,11 @@ function collect(raw, fromUrl) {
   try { if (navigator.vibrate) navigator.vibrate(n === 4 ? [60, 40, 60, 40, 120] : 80); } catch (e) {}
   if (n === 4) {
     if (!mainDone()) toast(t("bonusEarly"));
-    else if (upgraded() && Date.now() < deadline()) {
+    else {
       toast(t("bonusGot"));
-      const r = $("#reward"); r.classList.remove("upgrade"); void r.offsetWidth; r.classList.add("upgrade");
-      setTimeout(() => r.scrollIntoView({ behavior: "smooth", block: "start" }), 500);
-    } else toast(state.redeemed ? t("upLate") : t("expired"));
+      const r = $("#bonus"); r.classList.remove("upgrade"); void r.offsetWidth; r.classList.add("upgrade");
+      setTimeout(() => r.scrollIntoView({ behavior: "smooth", block: "center" }), 500);
+    }
   } else {
     toast(t("gotIt") + [1, 2, 3].filter(has).length + " / 3");
     if (mainDone()) setTimeout(() => $("#reward").scrollIntoView({ behavior: "smooth", block: "start" }), 700);
@@ -522,10 +516,11 @@ load();
 loadQ();
 if (state.code && !state.doneAt) { state.doneAt = Date.now(); save(); }
 buildCoupon($("#reward"), "main");
+buildCoupon($("#bonus"), "bonus");
 function showStatus() {
   let d = null; try { d = JSON.parse(localStorage.getItem(D_KEY)); } catch (e) {}
   const lines = [
-    "build: 10/12-b",
+    "build: 10/13-cafe",
     "sheet: " + (CFG.sheetUrl ? "on" : "off"),
     "test phone (not counted): " + (state.tester ? "YES" : "no"),
     "found: " + state.found.join(",") + (state.code ? " · " + state.code : ""),
